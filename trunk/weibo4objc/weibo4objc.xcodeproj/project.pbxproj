@@ -1,0 +1,835 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AA747D9F0F9514B9006C5449 /* weibo4objc_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* weibo4objc_Prefix.pch */; };
+		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+		EF18D4A912BEF4ED00382796 /* ServerSideError.h in Headers */ = {isa = PBXBuildFile; fileRef = EF18D4A712BEF4ED00382796 /* ServerSideError.h */; };
+		EF18D4AA12BEF4ED00382796 /* ServerSideError.m in Sources */ = {isa = PBXBuildFile; fileRef = EF18D4A812BEF4ED00382796 /* ServerSideError.m */; };
+		EF1A6F4912C32BD500B9B870 /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = EF8BAB6F12B623760083DFF2 /* Base64.m */; };
+		EF1D1D6912B71F21000D718C /* XmlStatusParser.h in Headers */ = {isa = PBXBuildFile; fileRef = EF1D1D6712B71F21000D718C /* XmlStatusParser.h */; };
+		EF1D1D6A12B71F21000D718C /* XmlStatusParser.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1D1D6812B71F21000D718C /* XmlStatusParser.m */; };
+		EF1D1D7112B71F6A000D718C /* JsonStatusParser.h in Headers */ = {isa = PBXBuildFile; fileRef = EF1D1D6F12B71F6A000D718C /* JsonStatusParser.h */; };
+		EF1D1D7212B71F6A000D718C /* JsonStatusParser.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1D1D7012B71F6A000D718C /* JsonStatusParser.m */; };
+		EF1D1D7B12B73589000D718C /* libxml2.2.7.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EF1D1D7A12B73589000D718C /* libxml2.2.7.3.dylib */; };
+		EF1D1DE412B74ED7000D718C /* JSON.h in Headers */ = {isa = PBXBuildFile; fileRef = EF1D1DD912B74ED7000D718C /* JSON.h */; };
+		EF1D1DE512B74ED7000D718C /* NSObject+SBJSON.h in Headers */ = {isa = PBXBuildFile; fileRef = EF1D1DDA12B74ED7000D718C /* NSObject+SBJSON.h */; };
+		EF1D1DE612B74ED7000D718C /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1D1DDB12B74ED7000D718C /* NSObject+SBJSON.m */; };
+		EF1D1DE712B74ED7000D718C /* NSString+SBJSON.h in Headers */ = {isa = PBXBuildFile; fileRef = EF1D1DDC12B74ED7000D718C /* NSString+SBJSON.h */; };
+		EF1D1DE812B74ED7000D718C /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1D1DDD12B74ED7000D718C /* NSString+SBJSON.m */; };
+		EF1D1DE912B74ED7000D718C /* SBJsonBase.h in Headers */ = {isa = PBXBuildFile; fileRef = EF1D1DDE12B74ED7000D718C /* SBJsonBase.h */; };
+		EF1D1DEA12B74ED7000D718C /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1D1DDF12B74ED7000D718C /* SBJsonBase.m */; };
+		EF1D1DEB12B74ED7000D718C /* SBJsonParser.h in Headers */ = {isa = PBXBuildFile; fileRef = EF1D1DE012B74ED7000D718C /* SBJsonParser.h */; };
+		EF1D1DEC12B74ED7000D718C /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1D1DE112B74ED7000D718C /* SBJsonParser.m */; };
+		EF1D1DED12B74ED7000D718C /* SBJsonWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = EF1D1DE212B74ED7000D718C /* SBJsonWriter.h */; };
+		EF1D1DEE12B74ED7000D718C /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1D1DE312B74ED7000D718C /* SBJsonWriter.m */; };
+		EF1F758912A37418007C5CDF /* OAuth+Additions.h in Headers */ = {isa = PBXBuildFile; fileRef = EF1F758512A37418007C5CDF /* OAuth+Additions.h */; };
+		EF1F758A12A37418007C5CDF /* OAuth+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1F758612A37418007C5CDF /* OAuth+Additions.m */; };
+		EF1F758B12A37418007C5CDF /* OAuthCore.h in Headers */ = {isa = PBXBuildFile; fileRef = EF1F758712A37418007C5CDF /* OAuthCore.h */; };
+		EF1F758C12A37418007C5CDF /* OAuthCore.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1F758812A37418007C5CDF /* OAuthCore.m */; };
+		EF1F759612A3743C007C5CDF /* NSData+Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = EF1F759412A3743C007C5CDF /* NSData+Base64.h */; };
+		EF1F759712A3743C007C5CDF /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1F759512A3743C007C5CDF /* NSData+Base64.m */; };
+		EF1F75A312A374BE007C5CDF /* Weibo.h in Headers */ = {isa = PBXBuildFile; fileRef = EF1F75A112A374BE007C5CDF /* Weibo.h */; };
+		EF1F75A412A374BE007C5CDF /* Weibo.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1F75A212A374BE007C5CDF /* Weibo.m */; };
+		EF1F75AB12A3762F007C5CDF /* OAuthToken.h in Headers */ = {isa = PBXBuildFile; fileRef = EF1F75A912A3762F007C5CDF /* OAuthToken.h */; };
+		EF1F75AC12A3762F007C5CDF /* OAuthToken.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1F75AA12A3762F007C5CDF /* OAuthToken.m */; };
+		EF1F75E612A37BDA007C5CDF /* Constants.h in Headers */ = {isa = PBXBuildFile; fileRef = EF1F75E512A37BDA007C5CDF /* Constants.h */; };
+		EF1F768112A390F6007C5CDF /* HttpClient.h in Headers */ = {isa = PBXBuildFile; fileRef = EF1F767F12A390F6007C5CDF /* HttpClient.h */; };
+		EF1F768212A390F6007C5CDF /* HttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1F768012A390F6007C5CDF /* HttpClient.m */; };
+		EF1F76B012A39700007C5CDF /* HttpMethodDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = EF1F76AF12A39700007C5CDF /* HttpMethodDelegate.h */; };
+		EF1F76B512A397DC007C5CDF /* HttpResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = EF1F76B312A397DC007C5CDF /* HttpResponse.h */; };
+		EF1F76B612A397DC007C5CDF /* HttpResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1F76B412A397DC007C5CDF /* HttpResponse.m */; };
+		EF1F76C812A39949007C5CDF /* BaseMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = EF1F76C612A39949007C5CDF /* BaseMethod.h */; };
+		EF1F76C912A39949007C5CDF /* BaseMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1F76C712A39949007C5CDF /* BaseMethod.m */; };
+		EF1F772D12A3B6D9007C5CDF /* GetMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = EF1F772B12A3B6D9007C5CDF /* GetMethod.h */; };
+		EF1F772E12A3B6D9007C5CDF /* GetMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1F772C12A3B6D9007C5CDF /* GetMethod.m */; };
+		EF1F773412A3B753007C5CDF /* PostMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = EF1F773212A3B753007C5CDF /* PostMethod.h */; };
+		EF1F773512A3B753007C5CDF /* PostMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1F773312A3B753007C5CDF /* PostMethod.m */; };
+		EF1F773912A3B7FF007C5CDF /* PutMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = EF1F773712A3B7FF007C5CDF /* PutMethod.h */; };
+		EF1F773A12A3B7FF007C5CDF /* PutMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1F773812A3B7FF007C5CDF /* PutMethod.m */; };
+		EF2D691512C07CDC0047631C /* escape.h in Headers */ = {isa = PBXBuildFile; fileRef = EF2D691412C07CDC0047631C /* escape.h */; };
+		EF2D691712C07D060047631C /* escape.c in Sources */ = {isa = PBXBuildFile; fileRef = EF2D691612C07D060047631C /* escape.c */; };
+		EF8BAB7512B623DB0083DFF2 /* Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = EF8BAB6E12B623760083DFF2 /* Base64.h */; };
+		EFBA4FCC12AF7AEE0054FC89 /* HttpClientTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EFBA4FCB12AF7AEE0054FC89 /* HttpClientTest.m */; };
+		EFBA501B12AF7F1A0054FC89 /* libweibo4objc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC07E0554694100DB518D /* libweibo4objc.a */; };
+		EFBA511112AF8A4A0054FC89 /* Status.h in Headers */ = {isa = PBXBuildFile; fileRef = EFBA510F12AF8A4A0054FC89 /* Status.h */; };
+		EFBA511212AF8A4A0054FC89 /* Status.m in Sources */ = {isa = PBXBuildFile; fileRef = EFBA511012AF8A4A0054FC89 /* Status.m */; };
+		EFBA511512AF8A5E0054FC89 /* DirectMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = EFBA511312AF8A5E0054FC89 /* DirectMessage.h */; };
+		EFBA511612AF8A5E0054FC89 /* DirectMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = EFBA511412AF8A5E0054FC89 /* DirectMessage.m */; };
+		EFBA511912AF8A6A0054FC89 /* Comment.h in Headers */ = {isa = PBXBuildFile; fileRef = EFBA511712AF8A6A0054FC89 /* Comment.h */; };
+		EFBA511A12AF8A6A0054FC89 /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = EFBA511812AF8A6A0054FC89 /* Comment.m */; };
+		EFBA511D12AF8A8B0054FC89 /* BaseStatus.h in Headers */ = {isa = PBXBuildFile; fileRef = EFBA511B12AF8A8B0054FC89 /* BaseStatus.h */; };
+		EFBA511E12AF8A8B0054FC89 /* BaseStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = EFBA511C12AF8A8B0054FC89 /* BaseStatus.m */; };
+		EFBA519212AFA7AB0054FC89 /* User.h in Headers */ = {isa = PBXBuildFile; fileRef = EFBA519012AFA7AB0054FC89 /* User.h */; };
+		EFBA519312AFA7AB0054FC89 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = EFBA519112AFA7AB0054FC89 /* User.m */; };
+		EFBA523A12AFB9A10054FC89 /* libweibo4objc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC07E0554694100DB518D /* libweibo4objc.a */; };
+		EFBA523F12AFB9B70054FC89 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+		EFBA524212AFB9D90054FC89 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EFBA524112AFB9D90054FC89 /* main.m */; };
+		EFC68EA712B9DA330040629E /* test.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFC68EA612B9DA330040629E /* test.xib */; };
+		EFC68EAF12B9DF910040629E /* InvalidParameterException.h in Headers */ = {isa = PBXBuildFile; fileRef = EFC68EAD12B9DF910040629E /* InvalidParameterException.h */; };
+		EFC68EB012B9DF910040629E /* InvalidParameterException.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC68EAE12B9DF910040629E /* InvalidParameterException.m */; };
+		EFCA88D412BF49FE0055E513 /* ServerSideException.h in Headers */ = {isa = PBXBuildFile; fileRef = EFCA88D212BF49FE0055E513 /* ServerSideException.h */; };
+		EFCA88D512BF49FE0055E513 /* ServerSideException.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCA88D312BF49FE0055E513 /* ServerSideException.m */; };
+		EFFE32EF12A498D900A80C69 /* HttpMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = EFFE32ED12A498D900A80C69 /* HttpMethod.h */; };
+		EFFE32F012A498D900A80C69 /* HttpMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = EFFE32EE12A498D900A80C69 /* HttpMethod.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AA747D9E0F9514B9006C5449 /* weibo4objc_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = weibo4objc_Prefix.pch; sourceTree = SOURCE_ROOT; };
+		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D2AAC07E0554694100DB518D /* libweibo4objc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libweibo4objc.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF18D4A712BEF4ED00382796 /* ServerSideError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerSideError.h; sourceTree = "<group>"; };
+		EF18D4A812BEF4ED00382796 /* ServerSideError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerSideError.m; sourceTree = "<group>"; };
+		EF1D1D6712B71F21000D718C /* XmlStatusParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlStatusParser.h; sourceTree = "<group>"; };
+		EF1D1D6812B71F21000D718C /* XmlStatusParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlStatusParser.m; sourceTree = "<group>"; };
+		EF1D1D6F12B71F6A000D718C /* JsonStatusParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsonStatusParser.h; sourceTree = "<group>"; };
+		EF1D1D7012B71F6A000D718C /* JsonStatusParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsonStatusParser.m; sourceTree = "<group>"; };
+		EF1D1D7A12B73589000D718C /* libxml2.2.7.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.7.3.dylib; path = usr/lib/libxml2.2.7.3.dylib; sourceTree = SDKROOT; };
+		EF1D1DD912B74ED7000D718C /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
+		EF1D1DDA12B74ED7000D718C /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
+		EF1D1DDB12B74ED7000D718C /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
+		EF1D1DDC12B74ED7000D718C /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
+		EF1D1DDD12B74ED7000D718C /* NSString+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SBJSON.m"; sourceTree = "<group>"; };
+		EF1D1DDE12B74ED7000D718C /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
+		EF1D1DDF12B74ED7000D718C /* SBJsonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonBase.m; sourceTree = "<group>"; };
+		EF1D1DE012B74ED7000D718C /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		EF1D1DE112B74ED7000D718C /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
+		EF1D1DE212B74ED7000D718C /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		EF1D1DE312B74ED7000D718C /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		EF1F758512A37418007C5CDF /* OAuth+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OAuth+Additions.h"; sourceTree = "<group>"; };
+		EF1F758612A37418007C5CDF /* OAuth+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OAuth+Additions.m"; sourceTree = "<group>"; };
+		EF1F758712A37418007C5CDF /* OAuthCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthCore.h; sourceTree = "<group>"; };
+		EF1F758812A37418007C5CDF /* OAuthCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthCore.m; sourceTree = "<group>"; };
+		EF1F759412A3743C007C5CDF /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+Base64.h"; path = "../NSData+Base64.h"; sourceTree = "<group>"; };
+		EF1F759512A3743C007C5CDF /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+Base64.m"; path = "../NSData+Base64.m"; sourceTree = "<group>"; };
+		EF1F75A112A374BE007C5CDF /* Weibo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Weibo.h; sourceTree = "<group>"; };
+		EF1F75A212A374BE007C5CDF /* Weibo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Weibo.m; sourceTree = "<group>"; };
+		EF1F75A912A3762F007C5CDF /* OAuthToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthToken.h; sourceTree = "<group>"; };
+		EF1F75AA12A3762F007C5CDF /* OAuthToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthToken.m; sourceTree = "<group>"; };
+		EF1F75E512A37BDA007C5CDF /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		EF1F767F12A390F6007C5CDF /* HttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpClient.h; sourceTree = "<group>"; };
+		EF1F768012A390F6007C5CDF /* HttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpClient.m; sourceTree = "<group>"; };
+		EF1F76AF12A39700007C5CDF /* HttpMethodDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpMethodDelegate.h; sourceTree = "<group>"; };
+		EF1F76B312A397DC007C5CDF /* HttpResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HttpResponse.h; path = method/HttpResponse.h; sourceTree = "<group>"; };
+		EF1F76B412A397DC007C5CDF /* HttpResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HttpResponse.m; path = method/HttpResponse.m; sourceTree = "<group>"; };
+		EF1F76C612A39949007C5CDF /* BaseMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseMethod.h; sourceTree = "<group>"; };
+		EF1F76C712A39949007C5CDF /* BaseMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseMethod.m; sourceTree = "<group>"; };
+		EF1F772B12A3B6D9007C5CDF /* GetMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetMethod.h; sourceTree = "<group>"; };
+		EF1F772C12A3B6D9007C5CDF /* GetMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetMethod.m; sourceTree = "<group>"; };
+		EF1F773212A3B753007C5CDF /* PostMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostMethod.h; sourceTree = "<group>"; };
+		EF1F773312A3B753007C5CDF /* PostMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostMethod.m; sourceTree = "<group>"; };
+		EF1F773712A3B7FF007C5CDF /* PutMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PutMethod.h; sourceTree = "<group>"; };
+		EF1F773812A3B7FF007C5CDF /* PutMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PutMethod.m; sourceTree = "<group>"; };
+		EF2D691412C07CDC0047631C /* escape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = escape.h; sourceTree = "<group>"; };
+		EF2D691612C07D060047631C /* escape.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = escape.c; sourceTree = "<group>"; };
+		EF36FC1D12ACB536004E8371 /* UnitTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UnitTest-Info.plist"; sourceTree = "<group>"; };
+		EF39795512A8BCDF00C6A580 /* unit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "unit-Info.plist"; sourceTree = "<group>"; };
+		EF6835E812ACDBDD00250D3A /* Untitled-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Untitled-Info.plist"; sourceTree = "<group>"; };
+		EF8BAB6E12B623760083DFF2 /* Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64.h; sourceTree = "<group>"; };
+		EF8BAB6F12B623760083DFF2 /* Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64.m; sourceTree = "<group>"; };
+		EFBA4FBE12AF7A200054FC89 /* unit.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = unit.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFBA4FCA12AF7AEE0054FC89 /* HttpClientTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpClientTest.h; sourceTree = "<group>"; };
+		EFBA4FCB12AF7AEE0054FC89 /* HttpClientTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpClientTest.m; sourceTree = "<group>"; };
+		EFBA510F12AF8A4A0054FC89 /* Status.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Status.h; sourceTree = "<group>"; };
+		EFBA511012AF8A4A0054FC89 /* Status.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Status.m; sourceTree = "<group>"; };
+		EFBA511312AF8A5E0054FC89 /* DirectMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectMessage.h; sourceTree = "<group>"; };
+		EFBA511412AF8A5E0054FC89 /* DirectMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectMessage.m; sourceTree = "<group>"; };
+		EFBA511712AF8A6A0054FC89 /* Comment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comment.h; sourceTree = "<group>"; };
+		EFBA511812AF8A6A0054FC89 /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
+		EFBA511B12AF8A8B0054FC89 /* BaseStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseStatus.h; sourceTree = "<group>"; };
+		EFBA511C12AF8A8B0054FC89 /* BaseStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseStatus.m; sourceTree = "<group>"; };
+		EFBA519012AFA7AB0054FC89 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		EFBA519112AFA7AB0054FC89 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		EFBA523412AFB9920054FC89 /* testApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFBA523612AFB9920054FC89 /* testApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "testApp-Info.plist"; sourceTree = "<group>"; };
+		EFBA524012AFB9D90054FC89 /* main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = main.h; path = ../main.h; sourceTree = "<group>"; };
+		EFBA524112AFB9D90054FC89 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ../main.m; sourceTree = "<group>"; };
+		EFC68EA612B9DA330040629E /* test.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = test.xib; sourceTree = "<group>"; };
+		EFC68EAD12B9DF910040629E /* InvalidParameterException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InvalidParameterException.h; sourceTree = "<group>"; };
+		EFC68EAE12B9DF910040629E /* InvalidParameterException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvalidParameterException.m; sourceTree = "<group>"; };
+		EFCA88D212BF49FE0055E513 /* ServerSideException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerSideException.h; sourceTree = "<group>"; };
+		EFCA88D312BF49FE0055E513 /* ServerSideException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerSideException.m; sourceTree = "<group>"; };
+		EFFE32ED12A498D900A80C69 /* HttpMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpMethod.h; sourceTree = "<group>"; };
+		EFFE32EE12A498D900A80C69 /* HttpMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpMethod.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D2AAC07C0554694100DB518D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFBA4FBB12AF7A200054FC89 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFBA501B12AF7F1A0054FC89 /* libweibo4objc.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFBA523212AFB9920054FC89 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFBA523A12AFB9A10054FC89 /* libweibo4objc.a in Frameworks */,
+				EFBA523F12AFB9B70054FC89 /* Foundation.framework in Frameworks */,
+				EF1D1D7B12B73589000D718C /* libxml2.2.7.3.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAC07E0554694100DB518D /* libweibo4objc.a */,
+				EFBA4FBE12AF7A200054FC89 /* unit.octest */,
+				EFBA523412AFB9920054FC89 /* testApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* weibo4objc */ = {
+			isa = PBXGroup;
+			children = (
+				08FB77AEFE84172EC02AAC07 /* Classes */,
+				32C88DFF0371C24200C91783 /* Other Sources */,
+				0867D69AFE84028FC02AAC07 /* Frameworks */,
+				034768DFFF38A50411DB9C8B /* Products */,
+				EF39795512A8BCDF00C6A580 /* unit-Info.plist */,
+				EF36FC1D12ACB536004E8371 /* UnitTest-Info.plist */,
+				EF6835E812ACDBDD00250D3A /* Untitled-Info.plist */,
+				EFBA523612AFB9920054FC89 /* testApp-Info.plist */,
+			);
+			name = weibo4objc;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
+				EF1D1D7A12B73589000D718C /* libxml2.2.7.3.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		08FB77AEFE84172EC02AAC07 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				EFC68EAC12B9DF5A0040629E /* exception */,
+				EF1D1D6612B71EE4000D718C /* parser */,
+				EF8BAAF712B61ACB0083DFF2 /* basicAuth */,
+				EFBA510B12AF89E80054FC89 /* adt */,
+				EFBA4FC812AF7A600054FC89 /* test */,
+				EF1F75A012A3748A007C5CDF /* httpClient */,
+				EF1F758412A37418007C5CDF /* oauth */,
+				EF1F75A112A374BE007C5CDF /* Weibo.h */,
+				EF1F75A212A374BE007C5CDF /* Weibo.m */,
+				EF1F75E512A37BDA007C5CDF /* Constants.h */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		32C88DFF0371C24200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				AA747D9E0F9514B9006C5449 /* weibo4objc_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		EF1D1D6612B71EE4000D718C /* parser */ = {
+			isa = PBXGroup;
+			children = (
+				EF1D1DD612B74E9D000D718C /* jsonFramework */,
+				EF1D1D6712B71F21000D718C /* XmlStatusParser.h */,
+				EF1D1D6812B71F21000D718C /* XmlStatusParser.m */,
+				EF1D1D6F12B71F6A000D718C /* JsonStatusParser.h */,
+				EF1D1D7012B71F6A000D718C /* JsonStatusParser.m */,
+			);
+			path = parser;
+			sourceTree = "<group>";
+		};
+		EF1D1DD612B74E9D000D718C /* jsonFramework */ = {
+			isa = PBXGroup;
+			children = (
+				EF1D1DD912B74ED7000D718C /* JSON.h */,
+				EF1D1DDA12B74ED7000D718C /* NSObject+SBJSON.h */,
+				EF1D1DDB12B74ED7000D718C /* NSObject+SBJSON.m */,
+				EF1D1DDC12B74ED7000D718C /* NSString+SBJSON.h */,
+				EF1D1DDD12B74ED7000D718C /* NSString+SBJSON.m */,
+				EF1D1DDE12B74ED7000D718C /* SBJsonBase.h */,
+				EF1D1DDF12B74ED7000D718C /* SBJsonBase.m */,
+				EF1D1DE012B74ED7000D718C /* SBJsonParser.h */,
+				EF1D1DE112B74ED7000D718C /* SBJsonParser.m */,
+				EF1D1DE212B74ED7000D718C /* SBJsonWriter.h */,
+				EF1D1DE312B74ED7000D718C /* SBJsonWriter.m */,
+			);
+			path = jsonFramework;
+			sourceTree = "<group>";
+		};
+		EF1F758412A37418007C5CDF /* oauth */ = {
+			isa = PBXGroup;
+			children = (
+				EF1F759412A3743C007C5CDF /* NSData+Base64.h */,
+				EF1F759512A3743C007C5CDF /* NSData+Base64.m */,
+				EF1F758512A37418007C5CDF /* OAuth+Additions.h */,
+				EF1F758612A37418007C5CDF /* OAuth+Additions.m */,
+				EF1F758712A37418007C5CDF /* OAuthCore.h */,
+				EF1F758812A37418007C5CDF /* OAuthCore.m */,
+				EF1F75A912A3762F007C5CDF /* OAuthToken.h */,
+				EF1F75AA12A3762F007C5CDF /* OAuthToken.m */,
+			);
+			path = oauth;
+			sourceTree = "<group>";
+		};
+		EF1F75A012A3748A007C5CDF /* httpClient */ = {
+			isa = PBXGroup;
+			children = (
+				EF1F76B312A397DC007C5CDF /* HttpResponse.h */,
+				EF1F76B412A397DC007C5CDF /* HttpResponse.m */,
+				EF1F76AA12A396CA007C5CDF /* method */,
+				EF1F767F12A390F6007C5CDF /* HttpClient.h */,
+				EF1F768012A390F6007C5CDF /* HttpClient.m */,
+			);
+			path = httpClient;
+			sourceTree = "<group>";
+		};
+		EF1F76AA12A396CA007C5CDF /* method */ = {
+			isa = PBXGroup;
+			children = (
+				EF1F76AF12A39700007C5CDF /* HttpMethodDelegate.h */,
+				EF1F76C612A39949007C5CDF /* BaseMethod.h */,
+				EF1F76C712A39949007C5CDF /* BaseMethod.m */,
+				EF1F772B12A3B6D9007C5CDF /* GetMethod.h */,
+				EF1F772C12A3B6D9007C5CDF /* GetMethod.m */,
+				EF1F773212A3B753007C5CDF /* PostMethod.h */,
+				EF1F773312A3B753007C5CDF /* PostMethod.m */,
+				EF1F773712A3B7FF007C5CDF /* PutMethod.h */,
+				EF1F773812A3B7FF007C5CDF /* PutMethod.m */,
+				EFFE32ED12A498D900A80C69 /* HttpMethod.h */,
+				EFFE32EE12A498D900A80C69 /* HttpMethod.m */,
+				EF2D691412C07CDC0047631C /* escape.h */,
+				EF2D691612C07D060047631C /* escape.c */,
+			);
+			path = method;
+			sourceTree = "<group>";
+		};
+		EF8BAAF712B61ACB0083DFF2 /* basicAuth */ = {
+			isa = PBXGroup;
+			children = (
+				EF8BAB6E12B623760083DFF2 /* Base64.h */,
+				EF8BAB6F12B623760083DFF2 /* Base64.m */,
+			);
+			path = basicAuth;
+			sourceTree = "<group>";
+		};
+		EFBA4FC812AF7A600054FC89 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				EFBA4FCA12AF7AEE0054FC89 /* HttpClientTest.h */,
+				EFBA4FCB12AF7AEE0054FC89 /* HttpClientTest.m */,
+				EFBA524012AFB9D90054FC89 /* main.h */,
+				EFBA524112AFB9D90054FC89 /* main.m */,
+				EFC68EA612B9DA330040629E /* test.xib */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
+		EFBA510B12AF89E80054FC89 /* adt */ = {
+			isa = PBXGroup;
+			children = (
+				EFBA510F12AF8A4A0054FC89 /* Status.h */,
+				EFBA511012AF8A4A0054FC89 /* Status.m */,
+				EFBA511312AF8A5E0054FC89 /* DirectMessage.h */,
+				EFBA511412AF8A5E0054FC89 /* DirectMessage.m */,
+				EFBA511712AF8A6A0054FC89 /* Comment.h */,
+				EFBA511812AF8A6A0054FC89 /* Comment.m */,
+				EFBA511B12AF8A8B0054FC89 /* BaseStatus.h */,
+				EFBA511C12AF8A8B0054FC89 /* BaseStatus.m */,
+				EFBA519012AFA7AB0054FC89 /* User.h */,
+				EFBA519112AFA7AB0054FC89 /* User.m */,
+			);
+			path = adt;
+			sourceTree = "<group>";
+		};
+		EFC68EAC12B9DF5A0040629E /* exception */ = {
+			isa = PBXGroup;
+			children = (
+				EFC68EAD12B9DF910040629E /* InvalidParameterException.h */,
+				EFC68EAE12B9DF910040629E /* InvalidParameterException.m */,
+				EF18D4A712BEF4ED00382796 /* ServerSideError.h */,
+				EF18D4A812BEF4ED00382796 /* ServerSideError.m */,
+				EFCA88D212BF49FE0055E513 /* ServerSideException.h */,
+				EFCA88D312BF49FE0055E513 /* ServerSideException.m */,
+			);
+			path = exception;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D2AAC07A0554694100DB518D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA747D9F0F9514B9006C5449 /* weibo4objc_Prefix.pch in Headers */,
+				EF1F758912A37418007C5CDF /* OAuth+Additions.h in Headers */,
+				EF1F758B12A37418007C5CDF /* OAuthCore.h in Headers */,
+				EF1F759612A3743C007C5CDF /* NSData+Base64.h in Headers */,
+				EF1F75A312A374BE007C5CDF /* Weibo.h in Headers */,
+				EF1F75AB12A3762F007C5CDF /* OAuthToken.h in Headers */,
+				EF1F75E612A37BDA007C5CDF /* Constants.h in Headers */,
+				EF1F768112A390F6007C5CDF /* HttpClient.h in Headers */,
+				EF1F76B012A39700007C5CDF /* HttpMethodDelegate.h in Headers */,
+				EF1F76B512A397DC007C5CDF /* HttpResponse.h in Headers */,
+				EF1F76C812A39949007C5CDF /* BaseMethod.h in Headers */,
+				EF1F772D12A3B6D9007C5CDF /* GetMethod.h in Headers */,
+				EF1F773412A3B753007C5CDF /* PostMethod.h in Headers */,
+				EF1F773912A3B7FF007C5CDF /* PutMethod.h in Headers */,
+				EFFE32EF12A498D900A80C69 /* HttpMethod.h in Headers */,
+				EFBA511112AF8A4A0054FC89 /* Status.h in Headers */,
+				EFBA511512AF8A5E0054FC89 /* DirectMessage.h in Headers */,
+				EFBA511912AF8A6A0054FC89 /* Comment.h in Headers */,
+				EFBA511D12AF8A8B0054FC89 /* BaseStatus.h in Headers */,
+				EFBA519212AFA7AB0054FC89 /* User.h in Headers */,
+				EF8BAB7512B623DB0083DFF2 /* Base64.h in Headers */,
+				EF1D1D6912B71F21000D718C /* XmlStatusParser.h in Headers */,
+				EF1D1D7112B71F6A000D718C /* JsonStatusParser.h in Headers */,
+				EF1D1DE412B74ED7000D718C /* JSON.h in Headers */,
+				EF1D1DE512B74ED7000D718C /* NSObject+SBJSON.h in Headers */,
+				EF1D1DE712B74ED7000D718C /* NSString+SBJSON.h in Headers */,
+				EF1D1DE912B74ED7000D718C /* SBJsonBase.h in Headers */,
+				EF1D1DEB12B74ED7000D718C /* SBJsonParser.h in Headers */,
+				EF1D1DED12B74ED7000D718C /* SBJsonWriter.h in Headers */,
+				EFC68EAF12B9DF910040629E /* InvalidParameterException.h in Headers */,
+				EF18D4A912BEF4ED00382796 /* ServerSideError.h in Headers */,
+				EFCA88D412BF49FE0055E513 /* ServerSideException.h in Headers */,
+				EF2D691512C07CDC0047631C /* escape.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D2AAC07D0554694100DB518D /* weibo4objc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "weibo4objc" */;
+			buildPhases = (
+				D2AAC07A0554694100DB518D /* Headers */,
+				D2AAC07B0554694100DB518D /* Sources */,
+				D2AAC07C0554694100DB518D /* Frameworks */,
+				EF68361912ACE0EB00250D3A /* ShellScript */,
+				EF68361E12ACE25A00250D3A /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = weibo4objc;
+			productName = weibo4objc;
+			productReference = D2AAC07E0554694100DB518D /* libweibo4objc.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		EFBA4FBD12AF7A200054FC89 /* unit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFBA4FC712AF7A220054FC89 /* Build configuration list for PBXNativeTarget "unit" */;
+			buildPhases = (
+				EFBA4FB912AF7A200054FC89 /* Resources */,
+				EFBA4FBA12AF7A200054FC89 /* Sources */,
+				EFBA4FBB12AF7A200054FC89 /* Frameworks */,
+				EFBA4FBC12AF7A200054FC89 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = unit;
+			productName = unit;
+			productReference = EFBA4FBE12AF7A200054FC89 /* unit.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+		EFBA523312AFB9920054FC89 /* testApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFBA523912AFB9930054FC89 /* Build configuration list for PBXNativeTarget "testApp" */;
+			buildPhases = (
+				EFBA523012AFB9920054FC89 /* Resources */,
+				EFBA523112AFB9920054FC89 /* Sources */,
+				EFBA523212AFB9920054FC89 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = testApp;
+			productName = testApp;
+			productReference = EFBA523412AFB9920054FC89 /* testApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "fanngyuan@sina";
+			};
+			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "weibo4objc" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 0867D691FE84028FC02AAC07 /* weibo4objc */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2AAC07D0554694100DB518D /* weibo4objc */,
+				EFBA4FBD12AF7A200054FC89 /* unit */,
+				EFBA523312AFB9920054FC89 /* testApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EFBA4FB912AF7A200054FC89 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFBA523012AFB9920054FC89 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFC68EA712B9DA330040629E /* test.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EF68361912ACE0EB00250D3A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = "/Users/fanngyuan/Documents/source/google-toolbox-for-mac-read-only/UnitTesting/RunIPhoneUnitTest.sh\n";
+			shellScript = "";
+		};
+		EF68361E12ACE25A00250D3A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/myfile",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "";
+		};
+		EFBA4FBC12AF7A200054FC89 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2AAC07B0554694100DB518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF1F758A12A37418007C5CDF /* OAuth+Additions.m in Sources */,
+				EF1F758C12A37418007C5CDF /* OAuthCore.m in Sources */,
+				EF1F759712A3743C007C5CDF /* NSData+Base64.m in Sources */,
+				EF1F75A412A374BE007C5CDF /* Weibo.m in Sources */,
+				EF1F75AC12A3762F007C5CDF /* OAuthToken.m in Sources */,
+				EF1F768212A390F6007C5CDF /* HttpClient.m in Sources */,
+				EF1F76B612A397DC007C5CDF /* HttpResponse.m in Sources */,
+				EF1F76C912A39949007C5CDF /* BaseMethod.m in Sources */,
+				EF1F772E12A3B6D9007C5CDF /* GetMethod.m in Sources */,
+				EF1F773512A3B753007C5CDF /* PostMethod.m in Sources */,
+				EF1F773A12A3B7FF007C5CDF /* PutMethod.m in Sources */,
+				EFFE32F012A498D900A80C69 /* HttpMethod.m in Sources */,
+				EFBA511212AF8A4A0054FC89 /* Status.m in Sources */,
+				EFBA511612AF8A5E0054FC89 /* DirectMessage.m in Sources */,
+				EFBA511A12AF8A6A0054FC89 /* Comment.m in Sources */,
+				EFBA511E12AF8A8B0054FC89 /* BaseStatus.m in Sources */,
+				EFBA519312AFA7AB0054FC89 /* User.m in Sources */,
+				EF1D1D6A12B71F21000D718C /* XmlStatusParser.m in Sources */,
+				EF1D1D7212B71F6A000D718C /* JsonStatusParser.m in Sources */,
+				EF1D1DE612B74ED7000D718C /* NSObject+SBJSON.m in Sources */,
+				EF1D1DE812B74ED7000D718C /* NSString+SBJSON.m in Sources */,
+				EF1D1DEA12B74ED7000D718C /* SBJsonBase.m in Sources */,
+				EF1D1DEC12B74ED7000D718C /* SBJsonParser.m in Sources */,
+				EF1D1DEE12B74ED7000D718C /* SBJsonWriter.m in Sources */,
+				EFC68EB012B9DF910040629E /* InvalidParameterException.m in Sources */,
+				EF18D4AA12BEF4ED00382796 /* ServerSideError.m in Sources */,
+				EFCA88D512BF49FE0055E513 /* ServerSideException.m in Sources */,
+				EF2D691712C07D060047631C /* escape.c in Sources */,
+				EF1A6F4912C32BD500B9B870 /* Base64.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFBA4FBA12AF7A200054FC89 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFBA4FCC12AF7AEE0054FC89 /* HttpClientTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFBA523112AFB9920054FC89 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFBA524212AFB9D90054FC89 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB921F08733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/weibo4objc.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = weibo4objc_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = weibo4objc;
+				SDKROOT = iphonesimulator4.0;
+			};
+			name = Debug;
+		};
+		1DEB922008733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DSTROOT = /tmp/weibo4objc.dst;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = weibo4objc_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = weibo4objc;
+			};
+			name = Release;
+		};
+		1DEB922308733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "/usr/include/libxml2//**";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
+				PREBINDING = NO;
+				SDKROOT = iphoneos4.0;
+			};
+			name = Debug;
+		};
+		1DEB922408733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PREBINDING = NO;
+				SDKROOT = iphoneos4.0;
+			};
+			name = Release;
+		};
+		EFBA4FC112AF7A210054FC89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = "unit-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					SenTestingKit,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = unit;
+				SDKROOT = iphonesimulator4.0;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		EFBA4FC212AF7A210054FC89 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				INFOPLIST_FILE = "unit-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					SenTestingKit,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = unit;
+				WRAPPER_EXTENSION = octest;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		EFBA523712AFB9930054FC89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
+				INFOPLIST_FILE = "testApp-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-framework",
+					Foundation,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = testApp;
+				SDKROOT = iphoneos4.0;
+			};
+			name = Debug;
+		};
+		EFBA523812AFB9930054FC89 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
+				INFOPLIST_FILE = "testApp-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = testApp;
+				SDKROOT = iphoneos4.0;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "weibo4objc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB921F08733DC00010E9CD /* Debug */,
+				1DEB922008733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "weibo4objc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB922308733DC00010E9CD /* Debug */,
+				1DEB922408733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFBA4FC712AF7A220054FC89 /* Build configuration list for PBXNativeTarget "unit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFBA4FC112AF7A210054FC89 /* Debug */,
+				EFBA4FC212AF7A210054FC89 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFBA523912AFB9930054FC89 /* Build configuration list for PBXNativeTarget "testApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFBA523712AFB9930054FC89 /* Debug */,
+				EFBA523812AFB9930054FC89 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}

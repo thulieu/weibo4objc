@@ -1,0 +1,487 @@
+TtestApp
+v7
+r0
+t314610500.510137
+cCheck dependencies
+cProcessInfoPlistFile /Users/fanngyuan/Documents/workspace/weibo4objc/build/Debug-iphonesimulator/testApp.app/Info.plist testApp-Info.plist
+cCompileXIB /Users/fanngyuan/Documents/workspace/weibo4objc/test/test.xib
+cProcessPCH++ /var/folders/EK/EK1kKfajGmW9KVSIkA9+MU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/UIKit-atbnivbiodxxseejrsqrfurlkuew/UIKit.h.gch /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h normal i386 objective-c++ com.apple.compilers.gcc.4_2
+cProcessPCH /var/folders/EK/EK1kKfajGmW9KVSIkA9+MU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/UIKit-arlocvcwehrktebvkisdcubhulut/UIKit.h.gch /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/weibo4objc.build/Debug-iphonesimulator/testApp.build/Objects-normal/i386/main.o /Users/fanngyuan/Documents/workspace/weibo4objc/test/../main.mm normal i386 objective-c++ com.apple.compilers.gcc.4_2
+cCompileC build/weibo4objc.build/Debug-iphonesimulator/testApp.build/Objects-normal/i386/Base64.o /Users/fanngyuan/Documents/workspace/weibo4objc/basicAuth/Base64.m normal i386 objective-c com.apple.compilers.gcc.4_2
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk
+c000000004C7066B20000000000000132
+t1282434738
+s306
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004BFDFE7C000000000029D5D0
+t1274936956
+s2741712
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004BFDFE6E0000000000001466
+t1274936942
+s5222
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000004C0470BB00000000000009CD
+t1275359419
+s2509
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/usr/lib/libxml2.2.7.3.dylib
+c000000004BFDFE030000000000122A80
+t1274936835
+s1190528
+
+N/Users/fanngyuan/Documents/workspace/weibo4objc/Constants.h
+c000000004D0F20CA00000000000001FE
+t1292837066
+s510
+
+N/Users/fanngyuan/Documents/workspace/weibo4objc/Weibo.h
+c000000004D0F1E040000000000000E92
+t1292836356
+s3730
+i<Foundation/Foundation.h>
+i"OAuthToken.h"
+i"Constants.h"
+i"HttpClient.h"
+i"Status.h"
+i"Comment.h"
+i"DirectMessage.h"
+i"InvalidParameterException.h"
+i"ServerSideException.h"
+
+N/Users/fanngyuan/Documents/workspace/weibo4objc/adt/BaseStatus.h
+c000000004D0EC0800000000000000198
+t1292812416
+s408
+i<Foundation/Foundation.h>
+
+N/Users/fanngyuan/Documents/workspace/weibo4objc/adt/Comment.h
+c000000004D0EC1FA000000000000021C
+t1292812794
+s540
+i<Foundation/Foundation.h>
+i"BaseStatus.h"
+i"User.h"
+i"Status.h"
+
+N/Users/fanngyuan/Documents/workspace/weibo4objc/adt/DirectMessage.h
+c000000004D0EC1C000000000000002CA
+t1292812736
+s714
+i<Foundation/Foundation.h>
+i"BaseStatus.h"
+i"User.h"
+
+N/Users/fanngyuan/Documents/workspace/weibo4objc/adt/Status.h
+c000000004D0EC13A00000000000004EA
+t1292812602
+s1258
+i<Foundation/Foundation.h>
+i"BaseStatus.h"
+
+N/Users/fanngyuan/Documents/workspace/weibo4objc/adt/User.h
+c000000004D0EC2400000000000000A98
+t1292812864
+s2712
+i<Foundation/Foundation.h>
+
+N/Users/fanngyuan/Documents/workspace/weibo4objc/basicAuth/Base64.h
+c000000004D05EE140000000000000247
+t1292234260
+s583
+i<Foundation/Foundation.h>
+
+N/Users/fanngyuan/Documents/workspace/weibo4objc/basicAuth/Base64.m
+c000000004D05EE220000000000000B55
+t1292234274
+s2901
+i"Base64.h"
+
+N/Users/fanngyuan/Documents/workspace/weibo4objc/build/Debug-iphonesimulator/libweibo4objc.a
+c000000004D105B9900000000000722A8
+t1292917657
+s467624
+
+N/Users/fanngyuan/Documents/workspace/weibo4objc/build/Debug-iphonesimulator/testApp.app
+t2
+s0
+
+N/Users/fanngyuan/Documents/workspace/weibo4objc/build/Debug-iphonesimulator/testApp.app.dSYM
+t2
+s0
+
+N/Users/fanngyuan/Documents/workspace/weibo4objc/build/Debug-iphonesimulator/testApp.app/Info.plist
+t1292917693
+s498
+
+N/Users/fanngyuan/Documents/workspace/weibo4objc/build/Debug-iphonesimulator/testApp.app/PkgInfo
+t1292917693
+s8
+
+N/Users/fanngyuan/Documents/workspace/weibo4objc/build/Debug-iphonesimulator/testApp.app/test.nib
+t1292917697
+s1968
+
+N/Users/fanngyuan/Documents/workspace/weibo4objc/build/Debug-iphonesimulator/testApp.app/testApp
+t2
+s0
+
+N/Users/fanngyuan/Documents/workspace/weibo4objc/build/weibo4objc.build/Debug-iphonesimulator/testApp.build/Objects-normal/i386/Base64.o
+t1292917700
+s12604
+
+N/Users/fanngyuan/Documents/workspace/weibo4objc/build/weibo4objc.build/Debug-iphonesimulator/testApp.build/Objects-normal/i386/main.o
+t2
+s0
+
+N/Users/fanngyuan/Documents/workspace/weibo4objc/build/weibo4objc.build/Debug-iphonesimulator/testApp.build/Objects-normal/i386/testApp.LinkFileList
+c000000004D105BBD000000000000010E
+t1292917693
+s270
+
+N/Users/fanngyuan/Documents/workspace/weibo4objc/exception/InvalidParameterException.h
+c000000004D09A81E00000000000000FA
+t1292478494
+s250
+i<Foundation/Foundation.h>
+
+N/Users/fanngyuan/Documents/workspace/weibo4objc/exception/ServerSideError.h
+c000000004D0EC33500000000000001B1
+t1292813109
+s433
+i<Foundation/Foundation.h>
+
+N/Users/fanngyuan/Documents/workspace/weibo4objc/exception/ServerSideException.h
+c000000004D0F1E250000000000000158
+t1292836389
+s344
+i<Foundation/Foundation.h>
+i"ServerSideError.h"
+
+N/Users/fanngyuan/Documents/workspace/weibo4objc/httpClient/HttpClient.h
+c000000004D0F0F750000000000000163
+t1292832629
+s355
+i"HttpMethod.h"
+i"HttpResponse.h"
+
+N/Users/fanngyuan/Documents/workspace/weibo4objc/httpClient/method/HttpMethod.h
+c000000004D0F10160000000000000306
+t1292832790
+s774
+i<Foundation/Foundation.h>
+i"HttpResponse.h"
+i"HttpMethodDelegate.h"
+
+N/Users/fanngyuan/Documents/workspace/weibo4objc/httpClient/method/HttpMethodDelegate.h
+c000000004CFF7D4000000000000002F2
+t1291812160
+s754
+i"HttpResponse.h"
+
+N/Users/fanngyuan/Documents/workspace/weibo4objc/httpClient/method/HttpResponse.h
+c000000004CF3609E000000000000065C
+t1291018398
+s1628
+i<Foundation/Foundation.h>
+
+N/Users/fanngyuan/Documents/workspace/weibo4objc/httpClient/method/escape.h
+c000000004D1046650000000000000236
+t1292912229
+s566
+
+N/Users/fanngyuan/Documents/workspace/weibo4objc/main.h
+c000000004CFF833900000000000000FA
+t1291813689
+s250
+i<Foundation/Foundation.h>
+i"HttpClient.h"
+i"HttpMethod.h"
+
+N/Users/fanngyuan/Documents/workspace/weibo4objc/main.m
+c000000004CFF825900000000000000B0
+t1291813465
+s176
+i"main.h"
+
+N/Users/fanngyuan/Documents/workspace/weibo4objc/oauth/OAuthToken.h
+c000000004CF33F9A00000000000006D5
+t1291009946
+s1749
+i<Foundation/Foundation.h>
+
+N/Users/fanngyuan/Documents/workspace/weibo4objc/parser/JsonStatusParser.h
+c000000004D0F126600000000000002D2
+t1292833382
+s722
+i<Foundation/Foundation.h>
+i"Status.h"
+i"Comment.h"
+i"DirectMessage.h"
+i"ServerSideError.h"
+
+N/Users/fanngyuan/Documents/workspace/weibo4objc/parser/jsonFramework/JSON.h
+c000000004D071BFC0000000000000AC4
+t1292311548
+s2756
+i"SBJsonParser.h"
+i"SBJsonWriter.h"
+i"NSObject+SBJSON.h"
+i"NSString+SBJSON.h"
+i<JSON/SBJsonParser.h>
+i<JSON/SBJsonWriter.h>
+i<JSON/NSObject+SBJSON.h>
+i<JSON/NSString+SBJSON.h>
+
+N/Users/fanngyuan/Documents/workspace/weibo4objc/parser/jsonFramework/NSObject+SBJSON.h
+c000000004C9CC2D6000000000000085F
+t1285341910
+s2143
+i<Foundation/Foundation.h>
+
+N/Users/fanngyuan/Documents/workspace/weibo4objc/parser/jsonFramework/NSString+SBJSON.h
+c000000004C9CC2D600000000000007F0
+t1285341910
+s2032
+i<Foundation/Foundation.h>
+
+N/Users/fanngyuan/Documents/workspace/weibo4objc/parser/jsonFramework/SBJsonBase.h
+c000000004C9CC2D60000000000000B82
+t1285341910
+s2946
+i<Foundation/Foundation.h>
+
+N/Users/fanngyuan/Documents/workspace/weibo4objc/parser/jsonFramework/SBJsonParser.h
+c000000004C9CC2D60000000000000C8F
+t1285341910
+s3215
+i<Foundation/Foundation.h>
+i"SBJsonBase.h"
+
+N/Users/fanngyuan/Documents/workspace/weibo4objc/parser/jsonFramework/SBJsonWriter.h
+c000000004C9CC2D600000000000011D9
+t1285341910
+s4569
+i<Foundation/Foundation.h>
+i"SBJsonBase.h"
+
+N/Users/fanngyuan/Documents/workspace/weibo4objc/test/../main.m
+c000000004D10586E0000000000000B3B
+t1292916846
+s2875
+i"main.h"
+i"HttpClient.h"
+i"HttpMethod.h"
+i"HttpResponse.h"
+i"Base64.h"
+i"Weibo.h"
+i<libxml/xmlmemory.h>
+i"JSON.h"
+i"JsonStatusParser.h"
+i"Status.h"
+
+N/Users/fanngyuan/Documents/workspace/weibo4objc/test/../main.mm
+c000000004D1058D00000000000000A4D
+t1292916944
+s2637
+i"main.h"
+i"HttpClient.h"
+i"HttpMethod.h"
+i"HttpResponse.h"
+i"Base64.h"
+i"Weibo.h"
+i<libxml/xmlmemory.h>
+i"JSON.h"
+i"JsonStatusParser.h"
+i"Status.h"
+
+N/Users/fanngyuan/Documents/workspace/weibo4objc/test/test.xib
+c000000004D09A47E0000000000003ED6
+t1292477566
+s16086
+
+N/usr/include/libxml2/libxml/xmlmemory.h
+c000000004B90C6970000000000001754
+t1267779223
+s5972
+
+N/var/folders/EK/EK1kKfajGmW9KVSIkA9+MU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/UIKit-arlocvcwehrktebvkisdcubhulut/UIKit.h.gch
+t1292917699
+s15231984
+
+N/var/folders/EK/EK1kKfajGmW9KVSIkA9+MU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/UIKit-atbnivbiodxxseejrsqrfurlkuew/UIKit.h.gch
+t1292917700
+s16247664
+
+N/var/folders/EK/EK1kKfajGmW9KVSIkA9+MU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/UIKit-eawkdpioqtoorafsizqwreqsztnj/UIKit.h.gch
+t1292293291
+s15231984
+
+NtestApp-Info.plist
+c000000004CFF821200000000000002B1
+t1291813394
+s689
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies314610493#314610493#0(0"0(0#1#0"2541400720#0"0#
+
+CCompileC build/weibo4objc.build/Debug-iphonesimulator/testApp.build/Objects-normal/i386/Base64.o /Users/fanngyuan/Documents/workspace/weibo4objc/basicAuth/Base64.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s314610500.361821
+e314610500.440362
+r1
+xCompileC
+xbuild/weibo4objc.build/Debug-iphonesimulator/testApp.build/Objects-normal/i386/Base64.o
+x/Users/fanngyuan/Documents/workspace/weibo4objc/basicAuth/Base64.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@74"Compile /Users/fanngyuan/Documents/workspace/weibo4objc/basicAuth/Base64.m314610500#314610500#0(0"0(0#0#66"/Users/fanngyuan/Documents/workspace/weibo4objc/basicAuth/Base64.m2541400720#2068"    cd /Users/fanngyuan/Documents/workspace/weibo4objc    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/fanngyuan/Documents/workspace/weibo4objc/build/weibo4objc.build/Debug-iphonesimulator/testApp.build/testApp-generated-files.hmap -I/Users/fanngyuan/Documents/workspace/weibo4objc/build/weibo4objc.build/Debug-iphonesimulator/testApp.build/testApp-own-target-headers.hmap -I/Users/fanngyuan/Documents/workspace/weibo4objc/build/weibo4objc.build/Debug-iphonesimulator/testApp.build/testApp-all-target-headers.hmap -iquote /Users/fanngyuan/Documents/workspace/weibo4objc/build/weibo4objc.build/Debug-iphonesimulator/testApp.build/testApp-project-headers.hmap -F/Users/fanngyuan/Documents/workspace/weibo4objc/build/Debug-iphonesimulator -I/Users/fanngyuan/Documents/workspace/weibo4objc/build/Debug-iphonesimulator/include -I/usr/include/libxml2 -I/usr/include/libxml2/libxml -I/Users/fanngyuan/Documents/workspace/weibo4objc/build/weibo4objc.build/Debug-iphonesimulator/testApp.build/DerivedSources/i386 -I/Users/fanngyuan/Documents/workspace/weibo4objc/build/weibo4objc.build/Debug-iphonesimulator/testApp.build/DerivedSources -include /var/folders/EK/EK1kKfajGmW9KVSIkA9+MU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/UIKit-arlocvcwehrktebvkisdcubhulut/UIKit.h -c /Users/fanngyuan/Documents/workspace/weibo4objc/basicAuth/Base64.m -o /Users/fanngyuan/Documents/workspace/weibo4objc/build/weibo4objc.build/Debug-iphonesimulator/testApp.build/Objects-normal/i386/Base64.o0#
+
+CCompileC build/weibo4objc.build/Debug-iphonesimulator/testApp.build/Objects-normal/i386/main.o /Users/fanngyuan/Documents/workspace/weibo4objc/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/weibo4objc.build/Debug-iphonesimulator/testApp.build/Objects-normal/i386/main.o /Users/fanngyuan/Documents/workspace/weibo4objc/test/../main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s314609653.760212
+e314609653.956867
+r0
+xCompileC
+xbuild/weibo4objc.build/Debug-iphonesimulator/testApp.build/Objects-normal/i386/main.o
+x/Users/fanngyuan/Documents/workspace/weibo4objc/test/../main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+o/Users/fanngyuan/Documents/workspace/weibo4objc/test/../main.m: In function 'main':
+o/Users/fanngyuan/Documents/workspace/weibo4objc/test/../main.m:22: error: nested functions are disabled, use -fnested-functions to re-enable
+o/Users/fanngyuan/Documents/workspace/weibo4objc/test/../main.m:22: error: expected '=', ',', ';', 'asm' or '__attribute__' before string constant
+o/Users/fanngyuan/Documents/workspace/weibo4objc/test/../main.m:23: error: 'WEBPAGE_URL' undeclared (first use in this function)
+o/Users/fanngyuan/Documents/workspace/weibo4objc/test/../main.m:23: error: (Each undeclared identifier is reported only once
+o/Users/fanngyuan/Documents/workspace/weibo4objc/test/../main.m:23: error: for each function it appears in.)
+o/Users/fanngyuan/Documents/workspace/weibo4objc/test/../main.m:35: warning: passing argument 2 of 'statusUpdate:inReplyToStatusId:latitude:longitude:' makes pointer from integer without a cast
+o/Users/fanngyuan/Documents/workspace/weibo4objc/test/../main.m:35: warning: passing argument 3 of 'statusUpdate:inReplyToStatusId:latitude:longitude:' makes pointer from integer without a cast
+o/Users/fanngyuan/Documents/workspace/weibo4objc/test/../main.m:35: warning: passing argument 4 of 'statusUpdate:inReplyToStatusId:latitude:longitude:' makes pointer from integer without a cast
+o/Users/fanngyuan/Documents/workspace/weibo4objc/test/../main.m:36: warning: format not a string literal and no format arguments
+o/Users/fanngyuan/Documents/workspace/weibo4objc/test/../main.m:41: warning: passing argument 1 of 'getPublicTimeline:' makes pointer from integer without a cast
+o/Users/fanngyuan/Documents/workspace/weibo4objc/test/../main.m:44: warning: format not a string literal and no format arguments
+lSLF07#2@70"Compile /Users/fanngyuan/Documents/workspace/weibo4objc/test/../main.m314609653#314609653#0(1727"/Users/fanngyuan/Documents/workspace/weibo4objc/test/../main.m: In function 'main':/Users/fanngyuan/Documents/workspace/weibo4objc/test/../main.m:22: error: nested functions are disabled, use -fnested-functions to re-enable/Users/fanngyuan/Documents/workspace/weibo4objc/test/../main.m:22: error: expected '=', ',', ';', 'asm' or '__attribute__' before string constant/Users/fanngyuan/Documents/workspace/weibo4objc/test/../main.m:23: error: 'WEBPAGE_URL' undeclared (first use in this function)/Users/fanngyuan/Documents/workspace/weibo4objc/test/../main.m:23: error: (Each undeclared identifier is reported only once/Users/fanngyuan/Documents/workspace/weibo4objc/test/../main.m:23: error: for each function it appears in.)/Users/fanngyuan/Documents/workspace/weibo4objc/test/../main.m:35: warning: passing argument 2 of 'statusUpdate:inReplyToStatusId:latitude:longitude:' makes pointer from integer without a cast/Users/fanngyuan/Documents/workspace/weibo4objc/test/../main.m:35: warning: passing argument 3 of 'statusUpdate:inReplyToStatusId:latitude:longitude:' makes pointer from integer without a cast/Users/fanngyuan/Documents/workspace/weibo4objc/test/../main.m:35: warning: passing argument 4 of 'statusUpdate:inReplyToStatusId:latitude:longitude:' makes pointer from integer without a cast/Users/fanngyuan/Documents/workspace/weibo4objc/test/../main.m:36: warning: format not a string literal and no format arguments/Users/fanngyuan/Documents/workspace/weibo4objc/test/../main.m:41: warning: passing argument 1 of 'getPublicTimeline:' makes pointer from integer without a cast/Users/fanngyuan/Documents/workspace/weibo4objc/test/../main.m:44: warning: format not a string literal and no format arguments9(4@66"Nested functions are disabled, use -fnested-functions to re-enable314609653#84#141#0(6@62"/Users/fanngyuan/Documents/workspace/weibo4objc/test/../main.m314609646#22#0#22#0#66"nested functions are disabled, use -fnested-functions to re-enable0(4@71"Expected '=', ',', ';', 'asm' or '__attribute__' before string constant314609653#225#146#0(6@62"/Users/fanngyuan/Documents/workspace/weibo4objc/test/../main.m314609646#22#0#22#0#19"expected * before *0(4@53"'WEBPAGE_URL' undeclared (first use in this function)314609653#371#128#0(6@62"/Users/fanngyuan/Documents/workspace/weibo4objc/test/../main.m314609646#23#0#23#0#43"'*' undeclared (first use in this function)0(22@116"Passing argument 2 of 'statusUpdate:inReplyToStatusId:latitude:longitude:' makes pointer from integer without a cast314609653#731#193#0(6@62"/Users/fanngyuan/Documents/workspace/weibo4objc/test/../main.m314609646#35#0#35#0#0"0(22@116"Passing argument 3 of 'statusUpdate:inReplyToStatusId:latitude:longitude:' makes pointer from integer without a cast314609653#924#193#0(6@62"/Users/fanngyuan/Documents/workspace/weibo4objc/test/../main.m314609646#35#0#35#0#0"0(22@116"Passing argument 4 of 'statusUpdate:inReplyToStatusId:latitude:longitude:' makes pointer from integer without a cast314609653#1117#193#0(6@62"/Users/fanngyuan/Documents/workspace/weibo4objc/test/../main.m314609646#35#0#35#0#0"0(22@51"Format not a string literal and no format arguments314609653#1310#128#0(6@62"/Users/fanngyuan/Documents/workspace/weibo4objc/test/../main.m314609646#36#0#36#0#51"format not a string literal and no format arguments0(22@84"Passing argument 1 of 'getPublicTimeline:' makes pointer from integer without a cast314609653#1438#161#0(6@62"/Users/fanngyuan/Documents/workspace/weibo4objc/test/../main.m314609646#41#0#41#0#0"0(22@51"Format not a string literal and no format arguments314609653#1599#128#0(6@62"/Users/fanngyuan/Documents/workspace/weibo4objc/test/../main.m314609646#44#0#44#0#51"format not a string literal and no format arguments0(0#0#62"/Users/fanngyuan/Documents/workspace/weibo4objc/test/../main.m2541400720#2062"    cd /Users/fanngyuan/Documents/workspace/weibo4objc    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/fanngyuan/Documents/workspace/weibo4objc/build/weibo4objc.build/Debug-iphonesimulator/testApp.build/testApp-generated-files.hmap -I/Users/fanngyuan/Documents/workspace/weibo4objc/build/weibo4objc.build/Debug-iphonesimulator/testApp.build/testApp-own-target-headers.hmap -I/Users/fanngyuan/Documents/workspace/weibo4objc/build/weibo4objc.build/Debug-iphonesimulator/testApp.build/testApp-all-target-headers.hmap -iquote /Users/fanngyuan/Documents/workspace/weibo4objc/build/weibo4objc.build/Debug-iphonesimulator/testApp.build/testApp-project-headers.hmap -F/Users/fanngyuan/Documents/workspace/weibo4objc/build/Debug-iphonesimulator -I/Users/fanngyuan/Documents/workspace/weibo4objc/build/Debug-iphonesimulator/include -I/usr/include/libxml2 -I/usr/include/libxml2/libxml -I/Users/fanngyuan/Documents/workspace/weibo4objc/build/weibo4objc.build/Debug-iphonesimulator/testApp.build/DerivedSources/i386 -I/Users/fanngyuan/Documents/workspace/weibo4objc/build/weibo4objc.build/Debug-iphonesimulator/testApp.build/DerivedSources -include /var/folders/EK/EK1kKfajGmW9KVSIkA9+MU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/UIKit-arlocvcwehrktebvkisdcubhulut/UIKit.h -c /Users/fanngyuan/Documents/workspace/weibo4objc/test/../main.m -o /Users/fanngyuan/Documents/workspace/weibo4objc/build/weibo4objc.build/Debug-iphonesimulator/testApp.build/Objects-normal/i386/main.o1#
+
+CCompileC build/weibo4objc.build/Debug-iphonesimulator/testApp.build/Objects-normal/i386/main.o /Users/fanngyuan/Documents/workspace/weibo4objc/test/../main.mm normal i386 objective-c++ com.apple.compilers.gcc.4_2
+s314610500.340176
+e314610500.509941
+r0
+xCompileC
+xbuild/weibo4objc.build/Debug-iphonesimulator/testApp.build/Objects-normal/i386/main.o
+x/Users/fanngyuan/Documents/workspace/weibo4objc/test/../main.mm
+xnormal
+xi386
+xobjective-c++
+xcom.apple.compilers.gcc.4_2
+o/Users/fanngyuan/Documents/workspace/weibo4objc/test/../main.mm: In function 'int main(int, char**)':
+o/Users/fanngyuan/Documents/workspace/weibo4objc/test/../main.mm:20: error: redeclaration of Objective-C class 'main'
+o/Users/fanngyuan/Documents/workspace/weibo4objc/test/../main.mm:28: error: invalid conversion from 'int' to 'long int*'
+o/Users/fanngyuan/Documents/workspace/weibo4objc/test/../main.mm:28: error: invalid conversion from 'int' to 'int*'
+o/Users/fanngyuan/Documents/workspace/weibo4objc/test/../main.mm:28: error: invalid conversion from 'int' to 'int*'
+o/Users/fanngyuan/Documents/workspace/weibo4objc/test/../main.mm:29: warning: format not a string literal and no format arguments
+o/Users/fanngyuan/Documents/workspace/weibo4objc/test/../main.mm:34: error: invalid conversion from 'int' to 'int*'
+o/Users/fanngyuan/Documents/workspace/weibo4objc/test/../main.mm:37: warning: format not a string literal and no format arguments
+o/Users/fanngyuan/Documents/workspace/weibo4objc/test/../Constants.h: At global scope:
+o/Users/fanngyuan/Documents/workspace/weibo4objc/test/../Constants.h:20: warning: 'baseUrl' defined but not used
+o/Users/fanngyuan/Documents/workspace/weibo4objc/test/../Constants.h:24: warning: 'error' defined but not used
+lSLF07#2@71"Compile /Users/fanngyuan/Documents/workspace/weibo4objc/test/../main.mm314610500#314610500#0(1250"/Users/fanngyuan/Documents/workspace/weibo4objc/test/../main.mm: In function 'int main(int, char**)':/Users/fanngyuan/Documents/workspace/weibo4objc/test/../main.mm:20: error: redeclaration of Objective-C class 'main'/Users/fanngyuan/Documents/workspace/weibo4objc/test/../main.mm:28: error: invalid conversion from 'int' to 'long int*'/Users/fanngyuan/Documents/workspace/weibo4objc/test/../main.mm:28: error: invalid conversion from 'int' to 'int*'/Users/fanngyuan/Documents/workspace/weibo4objc/test/../main.mm:28: error: invalid conversion from 'int' to 'int*'/Users/fanngyuan/Documents/workspace/weibo4objc/test/../main.mm:29: warning: format not a string literal and no format arguments/Users/fanngyuan/Documents/workspace/weibo4objc/test/../main.mm:34: error: invalid conversion from 'int' to 'int*'/Users/fanngyuan/Documents/workspace/weibo4objc/test/../main.mm:37: warning: format not a string literal and no format arguments/Users/fanngyuan/Documents/workspace/weibo4objc/test/../Constants.h: At global scope:/Users/fanngyuan/Documents/workspace/weibo4objc/test/../Constants.h:20: warning: 'baseUrl' defined but not used/Users/fanngyuan/Documents/workspace/weibo4objc/test/../Constants.h:24: warning: 'error' defined but not used10(4@41"Redeclaration of Objective-C class 'main'314610500#102#117#0(6@63"/Users/fanngyuan/Documents/workspace/weibo4objc/test/../main.mm314609744#20#0#20#0#0"0(4@44"Invalid conversion from 'int' to 'long int*'314610500#219#120#0(6@63"/Users/fanngyuan/Documents/workspace/weibo4objc/test/../main.mm314609744#28#0#28#0#34"invalid conversion from '*' to '*'0(4@39"Invalid conversion from 'int' to 'int*'314610500#339#115#0(6@63"/Users/fanngyuan/Documents/workspace/weibo4objc/test/../main.mm314609744#28#0#28#0#34"invalid conversion from '*' to '*'0(4@39"Invalid conversion from 'int' to 'int*'314610500#454#115#0(6@63"/Users/fanngyuan/Documents/workspace/weibo4objc/test/../main.mm314609744#28#0#28#0#34"invalid conversion from '*' to '*'0(22@51"Format not a string literal and no format arguments314610500#569#129#0(6@63"/Users/fanngyuan/Documents/workspace/weibo4objc/test/../main.mm314609744#29#0#29#0#51"format not a string literal and no format arguments0(4@39"Invalid conversion from 'int' to 'int*'314610500#698#115#0(6@63"/Users/fanngyuan/Documents/workspace/weibo4objc/test/../main.mm314609744#34#0#34#0#34"invalid conversion from '*' to '*'0(22@51"Format not a string literal and no format arguments314610500#813#129#0(6@63"/Users/fanngyuan/Documents/workspace/weibo4objc/test/../main.mm314609744#37#0#37#0#51"format not a string literal and no format arguments0(23@16"At global scope:314610500#942#86#0(6@67"/Users/fanngyuan/Documents/workspace/weibo4objc/test/../Constants.h314529866#0#0#0#0#0"0(22@30"'baseUrl' defined but not used314610500#1028#112#0(6@67"/Users/fanngyuan/Documents/workspace/weibo4objc/test/../Constants.h314529866#20#0#20#0#24"'*' defined but not used0(22@28"'error' defined but not used314610500#1140#110#0(6@67"/Users/fanngyuan/Documents/workspace/weibo4objc/test/../Constants.h314529866#24#0#24#0#24"'*' defined but not used0(0#0#63"/Users/fanngyuan/Documents/workspace/weibo4objc/test/../main.mm2541400720#2084"    cd /Users/fanngyuan/Documents/workspace/weibo4objc    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -fvisibility=hidden -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/fanngyuan/Documents/workspace/weibo4objc/build/weibo4objc.build/Debug-iphonesimulator/testApp.build/testApp-generated-files.hmap -I/Users/fanngyuan/Documents/workspace/weibo4objc/build/weibo4objc.build/Debug-iphonesimulator/testApp.build/testApp-own-target-headers.hmap -I/Users/fanngyuan/Documents/workspace/weibo4objc/build/weibo4objc.build/Debug-iphonesimulator/testApp.build/testApp-all-target-headers.hmap -iquote /Users/fanngyuan/Documents/workspace/weibo4objc/build/weibo4objc.build/Debug-iphonesimulator/testApp.build/testApp-project-headers.hmap -F/Users/fanngyuan/Documents/workspace/weibo4objc/build/Debug-iphonesimulator -I/Users/fanngyuan/Documents/workspace/weibo4objc/build/Debug-iphonesimulator/include -I/usr/include/libxml2 -I/usr/include/libxml2/libxml -I/Users/fanngyuan/Documents/workspace/weibo4objc/build/weibo4objc.build/Debug-iphonesimulator/testApp.build/DerivedSources/i386 -I/Users/fanngyuan/Documents/workspace/weibo4objc/build/weibo4objc.build/Debug-iphonesimulator/testApp.build/DerivedSources -include /var/folders/EK/EK1kKfajGmW9KVSIkA9+MU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/UIKit-atbnivbiodxxseejrsqrfurlkuew/UIKit.h -c /Users/fanngyuan/Documents/workspace/weibo4objc/test/../main.mm -o /Users/fanngyuan/Documents/workspace/weibo4objc/build/weibo4objc.build/Debug-iphonesimulator/testApp.build/Objects-normal/i386/main.o1#
+
+CCompileXIB /Users/fanngyuan/Documents/workspace/weibo4objc/test/test.xib
+s314610493.738685
+e314610498.036118
+r1
+xCompileXIB
+x/Users/fanngyuan/Documents/workspace/weibo4objc/test/test.xib
+oCouldn't open shared capabilities memory GSCapabilities (No such file or directory)
+lSLF07#2@24"CompileXIB test/test.xib314610493#314610498#0(84"Couldn't open shared capabilities memory GSCapabilities (No such file or directory)0(0#0#61"/Users/fanngyuan/Documents/workspace/weibo4objc/test/test.xib2541400720#590"    cd /Users/fanngyuan/Documents/workspace/weibo4objc    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.0    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/fanngyuan/Documents/workspace/weibo4objc/build/Debug-iphonesimulator/testApp.app/test.nib /Users/fanngyuan/Documents/workspace/weibo4objc/test/test.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk0#
+
+CGenerateDSYMFile /Users/fanngyuan/Documents/workspace/weibo4objc/build/Debug-iphonesimulator/testApp.app.dSYM /Users/fanngyuan/Documents/workspace/weibo4objc/build/Debug-iphonesimulator/testApp.app/testApp
+s314605430.938926
+e314605431.027424
+r1
+xGenerateDSYMFile
+x/Users/fanngyuan/Documents/workspace/weibo4objc/build/Debug-iphonesimulator/testApp.app.dSYM
+x/Users/fanngyuan/Documents/workspace/weibo4objc/build/Debug-iphonesimulator/testApp.app/testApp
+lSLF07#2@109"GenerateDSYMFile build/Debug-iphonesimulator/testApp.app.dSYM build/Debug-iphonesimulator/testApp.app/testApp314605430#314605431#0(0"0(0#0#95"/Users/fanngyuan/Documents/workspace/weibo4objc/build/Debug-iphonesimulator/testApp.app/testApp2541400720#410"    cd /Users/fanngyuan/Documents/workspace/weibo4objc    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/fanngyuan/Documents/workspace/weibo4objc/build/Debug-iphonesimulator/testApp.app/testApp -o /Users/fanngyuan/Documents/workspace/weibo4objc/build/Debug-iphonesimulator/testApp.app.dSYM0#
+
+CLd /Users/fanngyuan/Documents/workspace/weibo4objc/build/Debug-iphonesimulator/testApp.app/testApp normal i386
+s314609577.084103
+e314609577.117975
+r0
+xLd
+x/Users/fanngyuan/Documents/workspace/weibo4objc/build/Debug-iphonesimulator/testApp.app/testApp
+xnormal
+xi386
+oUndefined symbols:
+o  "_curl_escape", referenced from:
+o      _main in main.o
+old: symbol(s) not found
+ocollect2: ld returned 1 exit status
+lSLF07#2@100"Link /Users/fanngyuan/Documents/workspace/weibo4objc/build/Debug-iphonesimulator/testApp.app/testApp314609577#314609577#0(136"Undefined symbols:  "_curl_escape", referenced from:      _main in main.old: symbol(s) not foundcollect2: ld returned 1 exit status4(4@32""_curl_escape", referenced from:314609577#19#35#0(6@0"314609577#0#0#0#0#0"0(13@15"_main in main.o314609577#54#22#0(6@0"314609577#0#0#0#0#0"0(13@19"Symbol(s) not found314609577#76#24#0(6@0"314609577#0#0#0#0#0"0(13@35"Collect2: ld returned 1 exit status314609577#100#36#0(6@0"314609577#0#0#0#0#0"0(0#0#0"2541400720#978"    cd /Users/fanngyuan/Documents/workspace/weibo4objc    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -L/Users/fanngyuan/Documents/workspace/weibo4objc/build/Debug-iphonesimulator -F/Users/fanngyuan/Documents/workspace/weibo4objc/build/Debug-iphonesimulator -filelist /Users/fanngyuan/Documents/workspace/weibo4objc/build/weibo4objc.build/Debug-iphonesimulator/testApp.build/Objects-normal/i386/testApp.LinkFileList -mmacosx-version-min=10.6 -ObjC -framework Foundation -framework UIKit -Xlinker -objc_abi_version -Xlinker 2 -lweibo4objc -framework Foundation -lxml2.2.7.3 -o /Users/fanngyuan/Documents/workspace/weibo4objc/build/Debug-iphonesimulator/testApp.app/testApp1#
+
+CProcessInfoPlistFile /Users/fanngyuan/Documents/workspace/weibo4objc/build/Debug-iphonesimulator/testApp.app/Info.plist testApp-Info.plist
+s314610493.698843
+e314610493.738576
+r1
+xProcessInfoPlistFile
+x/Users/fanngyuan/Documents/workspace/weibo4objc/build/Debug-iphonesimulator/testApp.app/Info.plist
+xtestApp-Info.plist
+lSLF07#2@26"Process testApp-Info.plist314610493#314610493#0(0"0(0#0#66"/Users/fanngyuan/Documents/workspace/weibo4objc/testApp-Info.plist2541400720#506"    cd /Users/fanngyuan/Documents/workspace/weibo4objc    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility testApp-Info.plist -genpkginfo /Users/fanngyuan/Documents/workspace/weibo4objc/build/Debug-iphonesimulator/testApp.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/fanngyuan/Documents/workspace/weibo4objc/build/Debug-iphonesimulator/testApp.app/Info.plist0#
+
+CProcessPCH /var/folders/EK/EK1kKfajGmW9KVSIkA9+MU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/UIKit-arlocvcwehrktebvkisdcubhulut/UIKit.h.gch /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h normal i386 objective-c com.apple.compilers.gcc.4_2
+s314610498.037529
+e314610499.987510
+r1
+xProcessPCH
+x/var/folders/EK/EK1kKfajGmW9KVSIkA9+MU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/UIKit-arlocvcwehrktebvkisdcubhulut/UIKit.h.gch
+x/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@152"Precompile /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h314610498#314610499#0(0"0(0#0#141"/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h2541400720#2009"    cd /Users/fanngyuan/Documents/workspace/weibo4objc    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/fanngyuan/Documents/workspace/weibo4objc/build/weibo4objc.build/Debug-iphonesimulator/testApp.build/testApp-generated-files.hmap -I/Users/fanngyuan/Documents/workspace/weibo4objc/build/weibo4objc.build/Debug-iphonesimulator/testApp.build/testApp-own-target-headers.hmap -I/Users/fanngyuan/Documents/workspace/weibo4objc/build/weibo4objc.build/Debug-iphonesimulator/testApp.build/testApp-all-target-headers.hmap -iquote /Users/fanngyuan/Documents/workspace/weibo4objc/build/weibo4objc.build/Debug-iphonesimulator/testApp.build/testApp-project-headers.hmap -F/Users/fanngyuan/Documents/workspace/weibo4objc/build/Debug-iphonesimulator -I/Users/fanngyuan/Documents/workspace/weibo4objc/build/Debug-iphonesimulator/include -I/usr/include/libxml2 -I/usr/include/libxml2/libxml -I/Users/fanngyuan/Documents/workspace/weibo4objc/build/weibo4objc.build/Debug-iphonesimulator/testApp.build/DerivedSources/i386 -I/Users/fanngyuan/Documents/workspace/weibo4objc/build/weibo4objc.build/Debug-iphonesimulator/testApp.build/DerivedSources -c /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h -o /var/folders/EK/EK1kKfajGmW9KVSIkA9+MU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/UIKit-arlocvcwehrktebvkisdcubhulut/UIKit.h.gch0#
+
+CProcessPCH /var/folders/EK/EK1kKfajGmW9KVSIkA9+MU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/UIKit-eawkdpioqtoorafsizqwreqsztnj/UIKit.h.gch /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h normal i386 objective-c com.apple.compilers.gcc.4_2
+s313986090.681479
+e313986091.406257
+r1
+xProcessPCH
+x/var/folders/EK/EK1kKfajGmW9KVSIkA9+MU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/UIKit-eawkdpioqtoorafsizqwreqsztnj/UIKit.h.gch
+x/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@152"Precompile /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h313986090#313986091#0(0"0(0#0#141"/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h2541400720#1956"    cd /Users/fanngyuan/Documents/workspace/weibo4objc    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/fanngyuan/Documents/workspace/weibo4objc/build/weibo4objc.build/Debug-iphonesimulator/testApp.build/testApp-generated-files.hmap -I/Users/fanngyuan/Documents/workspace/weibo4objc/build/weibo4objc.build/Debug-iphonesimulator/testApp.build/testApp-own-target-headers.hmap -I/Users/fanngyuan/Documents/workspace/weibo4objc/build/weibo4objc.build/Debug-iphonesimulator/testApp.build/testApp-all-target-headers.hmap -iquote /Users/fanngyuan/Documents/workspace/weibo4objc/build/weibo4objc.build/Debug-iphonesimulator/testApp.build/testApp-project-headers.hmap -F/Users/fanngyuan/Documents/workspace/weibo4objc/build/Debug-iphonesimulator -I/Users/fanngyuan/Documents/workspace/weibo4objc/build/Debug-iphonesimulator/include -I/Users/fanngyuan/Documents/workspace/weibo4objc/build/weibo4objc.build/Debug-iphonesimulator/testApp.build/DerivedSources/i386 -I/Users/fanngyuan/Documents/workspace/weibo4objc/build/weibo4objc.build/Debug-iphonesimulator/testApp.build/DerivedSources -c /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h -o /var/folders/EK/EK1kKfajGmW9KVSIkA9+MU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/UIKit-eawkdpioqtoorafsizqwreqsztnj/UIKit.h.gch0#
+
+CProcessPCH++ /var/folders/EK/EK1kKfajGmW9KVSIkA9+MU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/UIKit-atbnivbiodxxseejrsqrfurlkuew/UIKit.h.gch /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h normal i386 objective-c++ com.apple.compilers.gcc.4_2
+s314610498.036324
+e314610500.340068
+r1
+xProcessPCH++
+x/var/folders/EK/EK1kKfajGmW9KVSIkA9+MU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/UIKit-atbnivbiodxxseejrsqrfurlkuew/UIKit.h.gch
+x/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+xnormal
+xi386
+xobjective-c++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@152"Precompile /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h314610498#314610500#0(0"0(0#0#141"/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h2541400720#2030"    cd /Users/fanngyuan/Documents/workspace/weibo4objc    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c++-header -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -fvisibility=hidden -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/fanngyuan/Documents/workspace/weibo4objc/build/weibo4objc.build/Debug-iphonesimulator/testApp.build/testApp-generated-files.hmap -I/Users/fanngyuan/Documents/workspace/weibo4objc/build/weibo4objc.build/Debug-iphonesimulator/testApp.build/testApp-own-target-headers.hmap -I/Users/fanngyuan/Documents/workspace/weibo4objc/build/weibo4objc.build/Debug-iphonesimulator/testApp.build/testApp-all-target-headers.hmap -iquote /Users/fanngyuan/Documents/workspace/weibo4objc/build/weibo4objc.build/Debug-iphonesimulator/testApp.build/testApp-project-headers.hmap -F/Users/fanngyuan/Documents/workspace/weibo4objc/build/Debug-iphonesimulator -I/Users/fanngyuan/Documents/workspace/weibo4objc/build/Debug-iphonesimulator/include -I/usr/include/libxml2 -I/usr/include/libxml2/libxml -I/Users/fanngyuan/Documents/workspace/weibo4objc/build/weibo4objc.build/Debug-iphonesimulator/testApp.build/DerivedSources/i386 -I/Users/fanngyuan/Documents/workspace/weibo4objc/build/weibo4objc.build/Debug-iphonesimulator/testApp.build/DerivedSources -c /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h -o /var/folders/EK/EK1kKfajGmW9KVSIkA9+MU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/UIKit-atbnivbiodxxseejrsqrfurlkuew/UIKit.h.gch0#
+
+CTouch /Users/fanngyuan/Documents/workspace/weibo4objc/build/Debug-iphonesimulator/testApp.app
+s314605431.027514
+e314605431.063202
+r1
+xTouch
+x/Users/fanngyuan/Documents/workspace/weibo4objc/build/Debug-iphonesimulator/testApp.app
+lSLF07#2@93"Touch /Users/fanngyuan/Documents/workspace/weibo4objc/build/Debug-iphonesimulator/testApp.app314605431#314605431#0(0"0(0#0#0"2541400720#296"    cd /Users/fanngyuan/Documents/workspace/weibo4objc    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/fanngyuan/Documents/workspace/weibo4objc/build/Debug-iphonesimulator/testApp.app0#
+
