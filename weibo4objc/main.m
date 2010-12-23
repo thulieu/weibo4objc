@@ -20,12 +20,6 @@
 #import "stdio.h"
 #import "stdlib.h"
 
-void curl_free(void *p)
-{
-	if(p)
-		free(p);
-}
-
 int main(int argc, char *argv[]) {
  	NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
 	Weibo * weibo = [[Weibo alloc]init];
