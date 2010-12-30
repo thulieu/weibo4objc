@@ -11,8 +11,19 @@
 
 @implementation MultipartPostMethod
 
+-(id) init{
+	self = [super init];
+	if(self != nil){
+		parts = [[NSMutableDictionary alloc] init];
+	}
+	return self;
+}
+
+- (void *) addPart:(PartBase *)part{
+}
+
 -(HttpResponse*)executeSynchronouslyAtURL:(NSURL*)methodURL {
-	//Call the executeMethod function from the super class, giving the appropriate parameters
+	// add pic to body
 	return [super executeMethodSynchronously:methodURL methodType:@"POST" dataInBody:YES contentType:@"multipart/form-data"];
 }
 
