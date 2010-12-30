@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "HttpResponse.h"
 #import "HttpMethodDelegate.h"
+#import "FilePart.h"
 
 typedef enum methodEnum {
     GET = 1,
@@ -19,8 +20,8 @@ typedef enum methodEnum {
 @interface HttpMethod : NSObject {
 	NSObject<HttpMethodDelegate> * delegate;
 	BOOL needAsyncExcute;
-	NSDictionary * headerFields;
-	NSDictionary * body;
+	NSMutableDictionary * headerFields;
+	NSMutableDictionary * body;
 	NSURL * url;
 }
 
@@ -28,11 +29,11 @@ typedef enum methodEnum {
 -(id) initWithMethod:(methodEnum ) httpMethod;
 
 @property (readwrite,assign) BOOL needAsyncExcute;
-@property (readwrite,retain) NSDictionary * headerFields;
-@property (readwrite,retain) NSDictionary * body;
+@property (readwrite,retain) NSMutableDictionary * headerFields;
+@property (readwrite,retain) NSMutableDictionary * body;
 @property (readwrite,retain) NSURL * url;
 
 -(HttpResponse *) execute;
-
+-(void) addPart:(FilePart *) part;
 
 @end
