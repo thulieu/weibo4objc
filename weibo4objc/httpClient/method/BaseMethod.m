@@ -26,17 +26,6 @@
 	return self;
 }
 
--(void)addParameter:(NSString*)paramData withName:(NSString*)paramName {
-	//Add the parameter to the parameters dictionary
-	[params setValue:paramData forKey:paramName];
-}
-
--(void)addParametersFromDictionary:(NSDictionary*)dict {
-	for (id key in dict) {
-		[params setValue:[dict objectForKey:key] forKey:key];
-	}
-}
-
 -(void)prepareMethod:(NSURL*)methodURL methodType:(NSString*)methodType dataInBody:(bool)dataInBody contentType:(NSString*)contentType withRequest:(NSMutableURLRequest*)request {
 	//Set the destination URL
 	[request setURL:methodURL];
