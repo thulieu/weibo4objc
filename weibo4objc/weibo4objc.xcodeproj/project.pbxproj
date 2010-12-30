@@ -54,6 +54,10 @@
 		EF1F773A12A3B7FF007C5CDF /* PutMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1F773812A3B7FF007C5CDF /* PutMethod.m */; };
 		EF2D691512C07CDC0047631C /* escape.h in Headers */ = {isa = PBXBuildFile; fileRef = EF2D691412C07CDC0047631C /* escape.h */; };
 		EF2D691712C07D060047631C /* escape.c in Sources */ = {isa = PBXBuildFile; fileRef = EF2D691612C07D060047631C /* escape.c */; };
+		EF5C161912CB1897001563EF /* FilePart.h in Headers */ = {isa = PBXBuildFile; fileRef = EF5C161712CB1897001563EF /* FilePart.h */; };
+		EF5C161A12CB1897001563EF /* FilePart.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5C161812CB1897001563EF /* FilePart.m */; };
+		EF5C161F12CB1B02001563EF /* PartBase.h in Headers */ = {isa = PBXBuildFile; fileRef = EF5C161E12CB1B02001563EF /* PartBase.h */; };
+		EF5C162712CB1C6C001563EF /* PartBase.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5C162612CB1C6C001563EF /* PartBase.m */; };
 		EF8BAB7512B623DB0083DFF2 /* Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = EF8BAB6E12B623760083DFF2 /* Base64.h */; };
 		EFBA4FCC12AF7AEE0054FC89 /* HttpClientTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EFBA4FCB12AF7AEE0054FC89 /* HttpClientTest.m */; };
 		EFBA501B12AF7F1A0054FC89 /* libweibo4objc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC07E0554694100DB518D /* libweibo4objc.a */; };
@@ -75,6 +79,12 @@
 		EFC68EB012B9DF910040629E /* InvalidParameterException.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC68EAE12B9DF910040629E /* InvalidParameterException.m */; };
 		EFCA88D412BF49FE0055E513 /* ServerSideException.h in Headers */ = {isa = PBXBuildFile; fileRef = EFCA88D212BF49FE0055E513 /* ServerSideException.h */; };
 		EFCA88D512BF49FE0055E513 /* ServerSideException.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCA88D312BF49FE0055E513 /* ServerSideException.m */; };
+		EFD8C06812CC6450003A86D2 /* MultipartPostMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = EFD8C06612CC6450003A86D2 /* MultipartPostMethod.h */; };
+		EFD8C06912CC6450003A86D2 /* MultipartPostMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD8C06712CC6450003A86D2 /* MultipartPostMethod.m */; };
+		EFD8C09D12CC73DB003A86D2 /* NSStringAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = EFD8C09B12CC73DB003A86D2 /* NSStringAdditions.h */; };
+		EFD8C09E12CC73DB003A86D2 /* NSStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD8C09C12CC73DB003A86D2 /* NSStringAdditions.m */; };
+		EFD8C0B412CC75BD003A86D2 /* NSDataAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = EFD8C0B212CC75BD003A86D2 /* NSDataAdditions.h */; };
+		EFD8C0B512CC75BD003A86D2 /* NSDataAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD8C0B312CC75BD003A86D2 /* NSDataAdditions.m */; };
 		EFFE32EF12A498D900A80C69 /* HttpMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = EFFE32ED12A498D900A80C69 /* HttpMethod.h */; };
 		EFFE32F012A498D900A80C69 /* HttpMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = EFFE32EE12A498D900A80C69 /* HttpMethod.m */; };
 /* End PBXBuildFile section */
@@ -129,6 +139,10 @@
 		EF2D691612C07D060047631C /* escape.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = escape.c; sourceTree = "<group>"; };
 		EF36FC1D12ACB536004E8371 /* UnitTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UnitTest-Info.plist"; sourceTree = "<group>"; };
 		EF39795512A8BCDF00C6A580 /* unit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "unit-Info.plist"; sourceTree = "<group>"; };
+		EF5C161712CB1897001563EF /* FilePart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilePart.h; sourceTree = "<group>"; };
+		EF5C161812CB1897001563EF /* FilePart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilePart.m; sourceTree = "<group>"; };
+		EF5C161E12CB1B02001563EF /* PartBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartBase.h; sourceTree = "<group>"; };
+		EF5C162612CB1C6C001563EF /* PartBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartBase.m; sourceTree = "<group>"; };
 		EF6835E812ACDBDD00250D3A /* Untitled-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Untitled-Info.plist"; sourceTree = "<group>"; };
 		EF8BAB6E12B623760083DFF2 /* Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64.h; sourceTree = "<group>"; };
 		EF8BAB6F12B623760083DFF2 /* Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64.m; sourceTree = "<group>"; };
@@ -147,13 +161,19 @@
 		EFBA519112AFA7AB0054FC89 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		EFBA523412AFB9920054FC89 /* testApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFBA523612AFB9920054FC89 /* testApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "testApp-Info.plist"; sourceTree = "<group>"; };
-		EFBA524012AFB9D90054FC89 /* main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = main.h; path = ../main.h; sourceTree = "<group>"; };
-		EFBA524112AFB9D90054FC89 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ../main.m; sourceTree = "<group>"; };
+		EFBA524012AFB9D90054FC89 /* main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = main.h; sourceTree = "<group>"; };
+		EFBA524112AFB9D90054FC89 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EFC68EA612B9DA330040629E /* test.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = test.xib; sourceTree = "<group>"; };
 		EFC68EAD12B9DF910040629E /* InvalidParameterException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InvalidParameterException.h; sourceTree = "<group>"; };
 		EFC68EAE12B9DF910040629E /* InvalidParameterException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvalidParameterException.m; sourceTree = "<group>"; };
 		EFCA88D212BF49FE0055E513 /* ServerSideException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerSideException.h; sourceTree = "<group>"; };
 		EFCA88D312BF49FE0055E513 /* ServerSideException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerSideException.m; sourceTree = "<group>"; };
+		EFD8C06612CC6450003A86D2 /* MultipartPostMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultipartPostMethod.h; sourceTree = "<group>"; };
+		EFD8C06712CC6450003A86D2 /* MultipartPostMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultipartPostMethod.m; sourceTree = "<group>"; };
+		EFD8C09B12CC73DB003A86D2 /* NSStringAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringAdditions.h; sourceTree = "<group>"; };
+		EFD8C09C12CC73DB003A86D2 /* NSStringAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringAdditions.m; sourceTree = "<group>"; };
+		EFD8C0B212CC75BD003A86D2 /* NSDataAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDataAdditions.h; sourceTree = "<group>"; };
+		EFD8C0B312CC75BD003A86D2 /* NSDataAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDataAdditions.m; sourceTree = "<group>"; };
 		EFFE32ED12A498D900A80C69 /* HttpMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpMethod.h; sourceTree = "<group>"; };
 		EFFE32EE12A498D900A80C69 /* HttpMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpMethod.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -295,6 +315,7 @@
 		EF1F75A012A3748A007C5CDF /* httpClient */ = {
 			isa = PBXGroup;
 			children = (
+				EF5C161612CB1861001563EF /* parts */,
 				EF1F76B312A397DC007C5CDF /* HttpResponse.h */,
 				EF1F76B412A397DC007C5CDF /* HttpResponse.m */,
 				EF1F76AA12A396CA007C5CDF /* method */,
@@ -320,8 +341,25 @@
 				EFFE32EE12A498D900A80C69 /* HttpMethod.m */,
 				EF2D691412C07CDC0047631C /* escape.h */,
 				EF2D691612C07D060047631C /* escape.c */,
+				EFD8C06612CC6450003A86D2 /* MultipartPostMethod.h */,
+				EFD8C06712CC6450003A86D2 /* MultipartPostMethod.m */,
+				EFD8C09B12CC73DB003A86D2 /* NSStringAdditions.h */,
+				EFD8C09C12CC73DB003A86D2 /* NSStringAdditions.m */,
+				EFD8C0B212CC75BD003A86D2 /* NSDataAdditions.h */,
+				EFD8C0B312CC75BD003A86D2 /* NSDataAdditions.m */,
 			);
 			path = method;
+			sourceTree = "<group>";
+		};
+		EF5C161612CB1861001563EF /* parts */ = {
+			isa = PBXGroup;
+			children = (
+				EF5C161712CB1897001563EF /* FilePart.h */,
+				EF5C161812CB1897001563EF /* FilePart.m */,
+				EF5C161E12CB1B02001563EF /* PartBase.h */,
+				EF5C162612CB1C6C001563EF /* PartBase.m */,
+			);
+			path = parts;
 			sourceTree = "<group>";
 		};
 		EF8BAAF712B61ACB0083DFF2 /* basicAuth */ = {
@@ -415,6 +453,11 @@
 				EF18D4A912BEF4ED00382796 /* ServerSideError.h in Headers */,
 				EFCA88D412BF49FE0055E513 /* ServerSideException.h in Headers */,
 				EF2D691512C07CDC0047631C /* escape.h in Headers */,
+				EF5C161912CB1897001563EF /* FilePart.h in Headers */,
+				EF5C161F12CB1B02001563EF /* PartBase.h in Headers */,
+				EFD8C06812CC6450003A86D2 /* MultipartPostMethod.h in Headers */,
+				EFD8C09D12CC73DB003A86D2 /* NSStringAdditions.h in Headers */,
+				EFD8C0B412CC75BD003A86D2 /* NSDataAdditions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,7 +471,6 @@
 				D2AAC07A0554694100DB518D /* Headers */,
 				D2AAC07B0554694100DB518D /* Sources */,
 				D2AAC07C0554694100DB518D /* Frameworks */,
-				EF68361912ACE0EB00250D3A /* ShellScript */,
 				EF68361E12ACE25A00250D3A /* ShellScript */,
 			);
 			buildRules = (
@@ -517,19 +559,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		EF68361912ACE0EB00250D3A /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = "/Users/fanngyuan/Documents/source/google-toolbox-for-mac-read-only/UnitTesting/RunIPhoneUnitTest.sh\n";
-			shellScript = "";
-		};
 		EF68361E12ACE25A00250D3A /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -593,6 +622,11 @@
 				EFCA88D512BF49FE0055E513 /* ServerSideException.m in Sources */,
 				EF2D691712C07D060047631C /* escape.c in Sources */,
 				EF1A6F4912C32BD500B9B870 /* Base64.m in Sources */,
+				EF5C161A12CB1897001563EF /* FilePart.m in Sources */,
+				EF5C162712CB1C6C001563EF /* PartBase.m in Sources */,
+				EFD8C06912CC6450003A86D2 /* MultipartPostMethod.m in Sources */,
+				EFD8C09E12CC73DB003A86D2 /* NSStringAdditions.m in Sources */,
+				EFD8C0B512CC75BD003A86D2 /* NSDataAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
