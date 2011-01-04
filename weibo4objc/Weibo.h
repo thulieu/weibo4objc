@@ -70,8 +70,8 @@
 - (NSString *)resetCount;
 - (Status *)getStatusShow:(weiboId) statusId;
 - (Status *)getStatusByUidStatusId:(weiboId) stautsId uid:(int) uid;
-- (Status *)statusUpdate:(NSString *) status inReplyToStatusId:(weiboId) replyToId latitude:(int) lat longitude:(int) longitude;
-- (Status *)statusUpload:(NSString *) status pic:(NSString *) pic latitude:(int ) lat longitude:(int) longitude;
+- (Status *)statusUpdate:(NSString *) status inReplyToStatusId:(weiboId) replyToId latitude:(double) lat longitude:(double) longitude;
+- (Status *)statusUpload:(NSString *) status pic:(NSString *) pic latitude:(double ) lat longitude:(double) longitude;
 - (Status *)statusDestroy:(weiboId) statusId;
 - (Status *)statusRepost:(weiboId) statusId status:(NSString *) status;
 - (Comment *)comment:(weiboId) statusId commentString:(NSString *) commentString;
