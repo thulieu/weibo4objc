@@ -7,7 +7,7 @@
 //
 
 #import "FilePart.h"
-
+#import "Constants.h"
 
 @implementation FilePart
 
@@ -30,6 +30,21 @@
 		charSet = [charSetString retain];
 	}
 	return self;	
+}
+
+-(NSData *) toData{
+	NSMutableData * outputData = [[NSMutableData alloc] init];
+	NSString * fileName = [[[file absoluteString] componentsSeparatedByString:@"/"] lastObject];
+	
+	//Get the file data
+	NSData * fileData = [NSData dataWithContentsOfURL:file];
+	
+	[outputData appendData:[[NSString stringWithFormat:@"Content-Disposition: form-data; name=\"%@\"; filename=\"%@\"\r\n", name, fileName] dataUsingEncoding:encoding]];
+	[outputData appendData:[[NSString stringWithString:@"Content-Type: application/octet-stream\r\n"] dataUsingEncoding:encoding]];
+	[outputData appendData:[[NSString stringWithString:@"Content-Transfer-Encoding: binary\r\n\r\n"] dataUsingEncoding:encoding]];
+	[outputData appendData:[NSData dataWithData:fileData]];
+	[outputData appendData:[[NSString stringWithString:@"\r\n"] dataUsingEncoding:encoding]];
+	return outputData;
 }
 
 -(void) dealloc{
