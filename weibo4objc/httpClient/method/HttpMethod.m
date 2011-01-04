@@ -10,7 +10,7 @@
 #import "GetMethod.h"
 #import "PutMethod.h"
 #import "PostMethod.h"
-
+#import "MultipartPostMethod.h"
 
 @implementation HttpMethod
 
@@ -49,13 +49,22 @@
 				break;
 			case POST:
 				delegate = [[PostMethod alloc] init];
-				break;				
+				break;
+			case MULTI:
+				delegate = [[MultipartPostMethod alloc] init];
+				break;
 			default:
 				break;
 		}
 	}
 	return self;
 	
+}
+
+-(void) addPart:(PartBase *) part{
+	if([delegate class] == [MultipartPostMethod class]){
+		[(MultipartPostMethod *)delegate addPart:part];
+	}
 }
 
 -(void) dealloc{

@@ -9,12 +9,13 @@
 #import <Foundation/Foundation.h>
 #import "HttpResponse.h"
 #import "HttpMethodDelegate.h"
-#import "FilePart.h"
+#import "PartBase.h"
 
 typedef enum methodEnum {
     GET = 1,
     PUT = 2,
-	POST = 3
+	POST = 3,
+	MULTI = 4
 } methodEnum;
 
 @interface HttpMethod : NSObject {
@@ -34,6 +35,6 @@ typedef enum methodEnum {
 @property (readwrite,retain) NSURL * url;
 
 -(HttpResponse *) execute;
--(void) addPart:(FilePart *) part;
+-(void) addPart:(PartBase *) part;
 
 @end
