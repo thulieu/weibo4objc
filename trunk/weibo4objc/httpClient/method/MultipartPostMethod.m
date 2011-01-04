@@ -8,56 +8,91 @@
 
 #import "MultipartPostMethod.h"
 #import "Constants.h"
+#import "escape.h"
 
 @implementation MultipartPostMethod
 
 -(id) init{
 	self = [super init];
 	if(self != nil){
-		parts = [[NSMutableDictionary alloc] init];
+		parts = [[NSMutableArray alloc] init];
 	}
 	return self;
 }
 
 - (void *) addPart:(PartBase *)part{
+	[parts addObject:part];
+}
+
+
+-(NSString*)generateBoundary {
+	//The characters to use when generating the boundary
+	NSString * boundChars = @"-_1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	
+	//Set the seed value for the random number generator
+	srandom(time(NULL));
+	
+	//Get a random number between 30 and 40 for the length of the boundary
+	int boundSize = 30 + (random() % 11);
+	
+	NSMutableString * boundaryString = [[NSMutableString alloc] initWithCapacity:boundSize];
+	
+	//Create the boundary string with random characters from the character pool
+	for (int x = 0; x < boundSize; x++) {
+		[boundaryString appendFormat:@"%c", [boundChars characterAtIndex:(random() % [boundChars length])]];
+	}
+	
+	return boundaryString;
+}
+
+-(void)prepareRequestWithURL:(NSURL*)methodURL withRequest:(NSMutableURLRequest*)urlRequest {
+	NSString * boundary = [self generateBoundary];
+	NSString * contentType = [NSString stringWithFormat:@"multipart/form-data; boundary=%@", boundary];
+	
+	//Set up the request
+	[urlRequest setURL:methodURL];
+	[urlRequest setHTTPMethod:@"POST"];
+	[urlRequest addValue:contentType forHTTPHeaderField: @"Content-Type"];
+	
+	//Set up the body
+	NSMutableData * requestBody = [[NSMutableData alloc] init];
+	
+	for (int i = 0; i < [parts count]; i++) {
+		PartBase * cPart = [parts objectAtIndex:i];
+		[requestBody appendData:[[NSString stringWithFormat:@"--%@\r\n",boundary] dataUsingEncoding:encoding]];
+		[requestBody appendData:[cPart toData]];
+	}
+	
+	[requestBody appendData:[[NSString stringWithFormat:@"--%@--\r\n",boundary] dataUsingEncoding:encoding]];
+	
+	[urlRequest setHTTPBody:requestBody];
+	
+	[boundary release];
+	[requestBody release];
 }
 
 -(HttpResponse*)executeSynchronouslyAtURL:(NSURL*)methodURL {
-	// add pic to body
-	return [super executeMethodSynchronously:methodURL methodType:@"POST" dataInBody:YES contentType:@"multipart/form-data"];
+	NSMutableURLRequest * urlRequest = [[NSMutableURLRequest alloc] init];
+	
+	[self prepareRequestWithURL:methodURL withRequest:urlRequest];
+	
+	NSHTTPURLResponse * response;
+	NSData *returnData = [NSURLConnection sendSynchronousRequest:urlRequest returningResponse:&response error:nil];
+	
+	HttpResponse * returnResponse = [[HttpResponse alloc] initWithHttpURLResponse:response withData:returnData];
+	
+	[urlRequest release];
+	
+	return returnResponse;
 }
 
--(void)executeAsynchronouslyAtURL:(NSURL*)methodURL {
-	[super executeMethodAsynchronously:methodURL methodType:@"POST" dataInBody:YES contentType:@"multipart/form-data"];
-}
-
-- (NSData*)generateFormData:(NSDictionary*)dict
-{
-	NSString* boundary = [NSString stringWithString:@"_insert_some_boundary_here_"];
-	NSArray* keys = [dict allKeys];
-	NSMutableData* result = [[NSMutableData alloc] initWithCapacity:100];
+-(void)executeAsynchronouslyAtURL:(NSURL*)methodURL{
 	
-	int i;
-	for (i = 0; i < [keys count]; i++) 
-	{
-		id value = [dict valueForKey: [keys objectAtIndex: i]];
-		[result appendData:[[NSString stringWithFormat:@"--%@\n", boundary] dataUsingEncoding:encoding]];
-		if ([value class] == [NSString class] || [value class] == [NSConstantString class])
-		{
-			[result appendData:[[NSString stringWithFormat:@"Content-Disposition: form-data; name=\"%@\"\n\n", [keys objectAtIndex:i]] dataUsingEncoding:encoding]];
-			[result appendData:[[NSString stringWithFormat:@"%@",value] dataUsingEncoding:encoding]];
-		}
-		else if ([value class] == [NSURL class] && [value isFileURL])
-		{
-			[result appendData:[[NSString stringWithFormat:@"Content-Disposition: form-data; name=\"%@\"; filename=\"%@\"\n", [keys objectAtIndex:i], [[value path] lastPathComponent]] dataUsingEncoding:encoding]];
-			[result appendData:[[NSString stringWithString:@"Content-Type: application/octet-stream\n\n"] dataUsingEncoding:encoding]];
-			[result appendData:[NSData dataWithContentsOfFile:[value path]]];
-		}
-		[result appendData:[[NSString stringWithString:@"\n"] dataUsingEncoding:encoding]];
-	}
-	[result appendData:[[NSString stringWithFormat:@"--%@--\n", boundary] dataUsingEncoding:encoding]];
+	NSMutableURLRequest * urlRequest = [[NSMutableURLRequest alloc] init];
 	
-	return [result autorelease];
+	[self prepareRequestWithURL:methodURL withRequest:urlRequest];
+		
+	[NSURLConnection connectionWithRequest:urlRequest];
 }
 
 @end

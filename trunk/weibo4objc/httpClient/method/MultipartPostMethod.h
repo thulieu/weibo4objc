@@ -9,9 +9,11 @@
 #import <Foundation/Foundation.h>
 #import "BaseMethod.h"
 #import "PartBase.h"
+#import "StringPart.h"
+#import "FilePart.h"
 
 @interface MultipartPostMethod : BaseMethod {
-	NSMutableDictionary * parts ;
+	NSMutableArray * parts ;
 }
 
 -(void *) addPart:(PartBase *) part;

@@ -23,5 +23,6 @@
 @property (readwrite,retain) NSString * name;
 @property (readwrite,retain) NSString * transferEncoding;
 @property (readwrite,assign) int length;
+-(NSData *) toData;
 
 @end
