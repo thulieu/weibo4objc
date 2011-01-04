@@ -65,9 +65,9 @@
 	NSMutableDictionary * mbody = [[NSMutableDictionary alloc] init];
 	[mbody setObject:status forKey:@"status"];
 	[self generateBodyDic:mbody paraKey:@"in_reply_to_status_id" paraValue:[[NSString alloc] initWithFormat:@"%llu",replyToId]];
-	if(lat!=0)
+	if(lat!=defaultLatitude)
 	[self generateBodyDic:mbody paraKey:@"lat" paraValue:[[NSString alloc]initWithFormat:@"%f",lat]];
-	if(longitude!=0)
+	if(longitude!=defaultLongitude)
 	[self generateBodyDic:mbody paraKey:@"long" paraValue:[[NSString alloc]initWithFormat:@"%f",longitude]];
 	NSString * resultString = [self retrieveData:urlString callMethod: POST body:mbody];
 	NSRange range = [resultString rangeOfString:error];
