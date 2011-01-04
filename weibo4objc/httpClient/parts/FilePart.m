@@ -13,23 +13,29 @@
 
 
 -(id) initWithNameAndFile:(NSString *) partName file:(NSURL *) fileUrl{
-	self = [super init];
-	if(self != nil){
-		name = [partName retain];
-		file = [fileUrl retain];
+	if([fileUrl isFileURL]){
+		self = [super init];
+		if(self != nil){
+			name = [partName retain];
+			file = [fileUrl retain];
+		}
+		return self;
 	}
-	return self;
+	return nil;
 }
 
 -(id) initWithNameFileContentTypeAndCharSet:(NSString *) partName file:(NSURL *) fileUrl contentType:(NSString *) contentTypeString charSet:(NSString *) charSetString{
-	self = [super init];
-	if(self != nil){
-		name = [partName retain];
-		file = [fileUrl retain];
-		contentType = [contentTypeString retain];
-		charSet = [charSetString retain];
+	if([fileUrl isFileURL]){
+		self = [super init];
+		if(self != nil){
+			name = [partName retain];
+			file = [fileUrl retain];
+			contentType = [contentTypeString retain];
+			charSet = [charSetString retain];
+		}
+		return self;	
 	}
-	return self;	
+	return nil;
 }
 
 -(NSData *) toData{
