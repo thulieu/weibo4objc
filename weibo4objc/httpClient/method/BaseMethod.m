@@ -62,7 +62,7 @@
 		free(keyAfterEscape);
 		free(valueAfterEscape);
 	}
-
+	
 	//Add the body data in either the actual HTTP body or as part of the URL query
 	if (dataInBody) { //For post methods, we add the parameters to the body
 		[request setHTTPBody:body];
