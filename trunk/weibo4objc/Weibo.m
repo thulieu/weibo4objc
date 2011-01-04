@@ -90,7 +90,7 @@
 	}
 }
 
-- (Status *)statusUpload:(NSString *) status pic:(NSString *) pic latitude:(double ) lat longitude:(double) longitude{
+- (Status *)statusUpload:(NSString *) status pic:(NSString *) pic latitude:(double ) latitude longitude:(double) longitude{
 	if(status == nil||pic == nil){
 		InvalidParameterException * exception = [InvalidParameterException 
 												 exceptionWithName:@"Invalid Parameter Exception" reason:@"Status should not be nil. " userInfo:nil];
@@ -119,7 +119,17 @@
 	
 }
 
--(NSString * ) uploadData:(NSString *) status picture:(NSString *) pic latitude:(double ) lat log:(double) longitude{
+-(NSString * ) uploadData:(NSString *) status urlString:(NSString *) urlString picture:(NSString *) pic lat:(double ) lat log:(double) log{
+	NSURL * url = [[NSURL alloc] initWithString:urlString];
+	HttpMethod * method = [[HttpMethod alloc] initWithMethod:MULTI];
+	[method setUrl:url];
+	NSDictionary * headers = [self setAuth];
+	[method setHeaderFields:headers];
+	[method setBody:httpbody]; 
+	HttpResponse * response =[client executeMethod:method];
+	[url release];
+	[method release];
+	return [response responseString];
 	
 }
 
