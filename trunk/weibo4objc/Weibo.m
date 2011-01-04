@@ -53,7 +53,7 @@
 	return result;
 }
 
-- (Status *)statusUpdate:(NSString *) status inReplyToStatusId:(weiboId) replyToId latitude:(int) lat longitude:(int) longitude{
+- (Status *)statusUpdate:(NSString *) status inReplyToStatusId:(weiboId) replyToId latitude:(double) lat longitude:(double) longitude{
 	if(status == nil){
 		InvalidParameterException * exception = [InvalidParameterException 
 												 exceptionWithName:@"Invalid Parameter Exception" reason:@"Status should not be nil. " userInfo:nil];
@@ -65,8 +65,10 @@
 	NSMutableDictionary * mbody = [[NSMutableDictionary alloc] init];
 	[mbody setObject:status forKey:@"status"];
 	[self generateBodyDic:mbody paraKey:@"in_reply_to_status_id" paraValue:[[NSString alloc] initWithFormat:@"%llu",replyToId]];
-	[self generateBodyDic:mbody paraKey:@"lat" paraValue:[[NSString alloc]initWithFormat:@"%d",lat]];
-	[self generateBodyDic:mbody paraKey:@"long" paraValue:[[NSString alloc]initWithFormat:@"%d",longitude]];
+	if(lat!=0)
+	[self generateBodyDic:mbody paraKey:@"lat" paraValue:[[NSString alloc]initWithFormat:@"%f",lat]];
+	if(longitude!=0)
+	[self generateBodyDic:mbody paraKey:@"long" paraValue:[[NSString alloc]initWithFormat:@"%f",longitude]];
 	NSString * resultString = [self retrieveData:urlString callMethod: POST body:mbody];
 	NSRange range = [resultString rangeOfString:error];
 	if(range.location == NSNotFound){
@@ -86,6 +88,39 @@
 		[mbody release];
 		@throw exception;
 	}
+}
+
+- (Status *)statusUpload:(NSString *) status pic:(NSString *) pic latitude:(double ) lat longitude:(double) longitude{
+	if(status == nil||pic == nil){
+		InvalidParameterException * exception = [InvalidParameterException 
+												 exceptionWithName:@"Invalid Parameter Exception" reason:@"Status should not be nil. " userInfo:nil];
+		@throw exception;
+	}
+	NSMutableString * urlString = [[NSMutableString alloc] init];
+	[urlString appendFormat:baseUrl];
+	[urlString appendFormat:@"statuses/upload.json?source=%@",_consumerKey];
+	NSString * resultString = [self uploadData:status picture:pic lat:lat log:longitude];
+	NSRange range = [resultString rangeOfString:error];
+	if(range.location == NSNotFound){
+		Status * result = [JsonStatusParser parseToStatus:resultString];
+		[urlString release];
+		[result autorelease];
+		[resultString release];
+		return result;	
+	}else{
+		ServerSideException * exception = [ServerSideException exceptionWithName:@"Server side exception" reason:@"Server side exception when update status." userInfo:nil];
+		ServerSideError * errorMsg = [JsonStatusParser parsetoServerSideError:resultString];
+		[exception setError:errorMsg];
+		[errorMsg release];
+		[urlString release];
+		[resultString release];
+		@throw exception;
+	}
+	
+}
+
+-(NSString * ) uploadData:(NSString *) status picture:(NSString *) pic latitude:(double ) lat log:(double) longitude{
+	
 }
 
 - (NSArray *)getFriendsTimeline:(weiboId) sinceId maxId:(weiboId) maxid count:(int) maxCount page:(int) currentPage{
