@@ -54,6 +54,11 @@
 	[urlRequest setHTTPMethod:@"POST"];
 	[urlRequest addValue:contentType forHTTPHeaderField: @"Content-Type"];
 	
+	//for headers
+	for(NSString* key in headers){
+		[urlRequest addValue:[headers valueForKey:key] forHTTPHeaderField:key];
+	}	
+	
 	//Set up the body
 	NSMutableData * requestBody = [[NSMutableData alloc] init];
 	
