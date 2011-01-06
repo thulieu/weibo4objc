@@ -15,12 +15,8 @@
 //for status unread
 #define withNewStatus = 1;
 #define withoutNewStatus = 0;
-#define defaultLatitude = 200;
-#define defaultLongitude = 200;
 
-//base url
-const static NSString * baseUrl = @"http://api.t.sina.com.cn/";
+const static double defaultLatitude = 200;
+const static double defaultLongitude = 200;
 
 const static NSStringEncoding encoding = NSUTF8StringEncoding;
-
-const static NSString * error = @"error_code";
