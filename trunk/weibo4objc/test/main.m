@@ -7,18 +7,7 @@
 //
 
 #import "main.h"
-#import "HttpClient.h"
-#import "HttpMethod.h"
-#import "HttpResponse.h"
-#import "Base64.h"
 #import "Weibo.h"
-#import <libxml/xmlmemory.h>
-#import "JSON.h"
-#import "JsonStatusParser.h"
-#import "Status.h"
-#include "escape.h"
-#import "stdio.h"
-#import "stdlib.h"
 
 int main(int argc, char *argv[]) {
  	NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
@@ -28,8 +17,9 @@ int main(int argc, char *argv[]) {
 	[weibo set_password:@"123456"];
 	[weibo set_consumerKey:@"1852823608"];
 	@try{
-	Status * statusme = [weibo statusUpdate:@"地发a被是abs从aa是a啊a啊t吧1123345" inReplyToStatusId:4520497159 latitude:1 longitude:1];
-	NSLog([statusme description]);	
+	Status * statusme = [weibo statusUpdate:@"aaa1" inReplyToStatusId:1000 latitude:nilLatitude longitude:nilLongitude];
+		//Status * statusme = [weibo statusUpload:@"111" pic:@"file:///Users/fanngyuan/Downloads/IMG_0750.jpg" latitude:defaultLatitude longitude:defaultLongitude];
+		NSLog([statusme description]);	
 	}
 	@catch (id ex) {
 		printf("aaa");

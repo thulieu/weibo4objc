@@ -7,8 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "HttpClient.h"
-#import "HttpMethod.h"
 
 
 @interface main : NSObject {
