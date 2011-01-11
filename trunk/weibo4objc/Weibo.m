@@ -13,6 +13,16 @@
 #import "StringPart.h"
 #import "FilePart.h"
 
+@interface Weibo (Private) 
+
+- (NSString *) generateParameterString:(NSDictionary *) parameters;
+- (void *) generateBodyDic:(NSMutableDictionary *) bodyDic paraKey:(NSString *) key paraValue:(NSString *) value;	
+-(HttpMethod *) getMethod:(NSString *) urlString;
+-(HttpMethod *) putMethod:(NSString *) urlString;	
+-(HttpMethod *) postMethd:(NSString *) urlString;
+
+@end
+
 @implementation Weibo
 
 @synthesize _consumerKey;
@@ -69,11 +79,12 @@ NSString * error = @"error_code";
 	[urlString appendFormat:@"statuses/update.json?source=%@",_consumerKey];
 	NSMutableDictionary * mbody = [[NSMutableDictionary alloc] init];
 	[mbody setObject:status forKey:@"status"];
-	[self generateBodyDic:mbody paraKey:@"in_reply_to_status_id" paraValue:[[[NSString alloc] initWithFormat:@"%llu",replyToId] autorelease]];
-	if(lat != defaultLatitude)
-	[self generateBodyDic:mbody paraKey:@"lat" paraValue:[[[NSString alloc]initWithFormat:@"%f",lat] autorelease]];
-	if(longitude != defaultLongitude)
-	[self generateBodyDic:mbody paraKey:@"long" paraValue:[[[NSString alloc]initWithFormat:@"%f",longitude] autorelease]];
+	if(replyToId!=nilReplyId)
+	[self generateBodyDic:mbody paraKey:@"in_reply_to_status_id" paraValue:[NSString stringWithFormat:@"%llu",replyToId]];
+	if(lat != nilLatitude)
+	[self generateBodyDic:mbody paraKey:@"lat" paraValue:[NSString stringWithFormat:@"%f",lat] ];
+	if(longitude != nilLongitude)
+	[self generateBodyDic:mbody paraKey:@"long" paraValue:[NSString stringWithFormat:@"%f",longitude] ];
 	NSString * resultString = [self retrieveData:urlString callMethod: POST body:mbody];
 	NSRange range = [resultString rangeOfString:error];
 	if(range.location == NSNotFound){
@@ -131,12 +142,12 @@ NSString * error = @"error_code";
 	FilePart * picPart = [[FilePart alloc] initWithNameAndFile:@"pic" file:picUrl];
 	[method addPart:statusPart];
 	[method addPart:picPart];
-	if(lat != defaultLatitude){
+	if(lat != nilLatitude){
 		StringPart * latPart = [[StringPart alloc] initWithParameter:[[[NSString alloc] initWithFormat:@"%f",lat] autorelease] withName:@"latitude"];
 		[method addPart:latPart];
 		[latPart release];
 	}
-	if(log != defaultLongitude){
+	if(log != nilLongitude){
 		StringPart * logPart = [[StringPart alloc] initWithParameter:[[[NSString alloc] initWithFormat:@"%f",log] autorelease] withName:@"longitude"];
 		[method addPart:logPart];
 		[logPart release];
@@ -438,6 +449,38 @@ sinceId:(weiboId) sinceId maxId:(weiboId) maxid count:(int) maxCount page:(int) 
 	[authString release];
 	[tmpString release];
 	return headers;
+}
+
+- (NSString *) generateParameterString:(NSDictionary *) parameters{
+	NSMutableString * result = [[NSMutableString alloc] init];
+	for(NSString * key in parameters){
+		NSData * value = [parameters objectForKey:key];
+		if(value != nil){
+			[result appendFormat:@"&%@=%@",key,[[NSString alloc] initWithData:value encoding:encoding]];
+		}
+	}
+	return result;
+}
+
+- (void *) generateBodyDic:(NSMutableDictionary *) bodyDic paraKey:(NSString *) key paraValue:(NSString *) value{
+	if(value!=nil){
+		[bodyDic setObject:value forKey:key];
+	}
+}
+
+-(HttpMethod *) getMethod:(NSString *) urlString{
+	HttpMethod * method = [[HttpMethod alloc] init];
+	return method;
+}
+
+-(HttpMethod *) putMethod:(NSString *) urlString{
+	HttpMethod * method = [[HttpMethod alloc] initWithMethod:PUT];
+	return method;	
+}
+
+-(HttpMethod *) postMethd:(NSString *) urlString{
+	HttpMethod * method =[[HttpMethod alloc] initWithMethod:POST];
+	return method;
 }
 
 @end

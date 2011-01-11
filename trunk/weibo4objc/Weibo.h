@@ -16,7 +16,9 @@
 #import "InvalidParameterException.h"
 #import "ServerSideException.h"
 
-
+static const double nilLatitude = 200;
+static const double nilLongitude = 200;
+static const weiboId nilReplyId = 0;
 
 @interface Weibo : NSObject {
 	@private HttpClient * client;
