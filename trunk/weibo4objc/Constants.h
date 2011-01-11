@@ -16,7 +16,4 @@
 #define withNewStatus = 1;
 #define withoutNewStatus = 0;
 
-const static double defaultLatitude = 200;
-const static double defaultLongitude = 200;
-
 const static NSStringEncoding encoding = NSUTF8StringEncoding;
