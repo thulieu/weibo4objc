@@ -17,8 +17,8 @@ int main(int argc, char *argv[]) {
 	[weibo set_password:@"123456"];
 	[weibo set_consumerKey:@"1852823608"];
 	@try{
-	Status * statusme = [weibo statusUpdate:@"aaa1" inReplyToStatusId:1000 latitude:nilLatitude longitude:nilLongitude];
-		//Status * statusme = [weibo statusUpload:@"111" pic:@"file:///Users/fanngyuan/Downloads/IMG_0750.jpg" latitude:defaultLatitude longitude:defaultLongitude];
+		//Status * statusme = [weibo statusUpdate:@"aaa1" inReplyToStatusId:1000 latitude:nilLatitude longitude:nilLongitude];
+		Status * statusme = [weibo statusUpload:@"111" pic:@"file:///Users/fanngyuan/Downloads/IMG_0750.jpg" latitude:nilLatitude longitude:nilLongitude];
 		NSLog([statusme description]);	
 	}
 	@catch (id ex) {
