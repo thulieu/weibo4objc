@@ -90,11 +90,12 @@
 }
 
 -(void)executeMethodAsynchronously:(NSURL*)methodURL methodType:(NSString*)methodType dataInBody:(bool)dataInBody contentType:(NSString*)contentType {
-	NSMutableURLRequest * request = [[NSMutableURLRequest alloc] init];
+	/*NSMutableURLRequest * request = [[NSMutableURLRequest alloc] init];
 	
 	[self prepareMethod:methodURL methodType:methodType dataInBody:dataInBody contentType:contentType withRequest:request];
 	
 	[NSURLConnection connectionWithRequest:request];
+	 */
 }
 
 -(void)dealloc{
