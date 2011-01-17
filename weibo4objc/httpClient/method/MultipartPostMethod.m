@@ -93,11 +93,12 @@
 
 -(void)executeAsynchronouslyAtURL:(NSURL*)methodURL{
 	
-	NSMutableURLRequest * urlRequest = [[NSMutableURLRequest alloc] init];
+	/*NSMutableURLRequest * urlRequest = [[NSMutableURLRequest alloc] init];
 	
 	[self prepareRequestWithURL:methodURL withRequest:urlRequest];
 		
 	[NSURLConnection connectionWithRequest:urlRequest];
+	 */
 }
 
 @end

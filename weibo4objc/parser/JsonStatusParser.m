@@ -9,6 +9,14 @@
 #import "JsonStatusParser.h"
 #import "SBJsonParser.h"
 
+@interface JsonStatusParser (Private) 
+
++ (Status *) dicToStatus:(NSDictionary *) dic;
++ (User *) dicToUser:(NSDictionary *) dic;
++ (DirectMessage *) dicToDm:(NSDictionary *) dic;
+
+@end
+
 @implementation JsonStatusParser
 
 + (NSArray *) parseToStatuses:(NSString *) statusesString{
@@ -85,7 +93,7 @@
 + (Comment *) dicToComment:(NSDictionary *) dic{
 	Comment * comment = [[Comment alloc] init];
 	[comment setCreated_at:[dic objectForKey:@"created_at"]];
-	[comment setAid:[dic objectForKey:@"id"]];
+	[comment setAid:[[dic objectForKey:@"id"]longLongValue]];
 	[comment setText:[dic objectForKey:@"text"]];
 	[comment setUser:[JsonStatusParser dicToUser:[dic objectForKey:@"user"]]];
 	return comment;
@@ -140,10 +148,10 @@
 + (DirectMessage *) dicToDm:(NSDictionary *) dic{
 	DirectMessage * dm = [[DirectMessage alloc]init];
 	[dm setCreated_at:[dic objectForKey:@"created_at"]];
-	[dm setAid:[dic objectForKey:@"id"]];
+	[dm setAid:[[dic objectForKey:@"id"] longLongValue]];
 	[dm setText:[dic objectForKey:@"text"]];
-	[dm setSender_id:[dic objectForKey:@"sender_id"]];
-	[dm setRecipient_id:[dic objectForKey:@"recipient_id"]];
+	[dm setSender_id:[[dic objectForKey:@"sender_id"] longLongValue]];
+	[dm setRecipient_id:[[dic objectForKey:@"recipient_id"]longLongValue]];
 	[dm setSender_screen_name:[dic objectForKey:@"sender_screen_name"]];
 	[dm setRecipient_screen_name:[dic objectForKey:@"recipient_screen_name"]];
 	[dm setSender:[JsonStatusParser dicToUser:[dic objectForKey:@"sender"]]];
