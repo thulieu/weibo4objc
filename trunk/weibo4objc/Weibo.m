@@ -20,6 +20,9 @@
 -(HttpMethod *) getMethod:(NSString *) urlString;
 -(HttpMethod *) putMethod:(NSString *) urlString;	
 -(HttpMethod *) postMethd:(NSString *) urlString;
+- (NSString *) retrieveData:(NSString *) urlString callMethod:(methodEnum ) methodE body:(NSDictionary *) httpbody;
+-(NSString * ) uploadData:(NSString *) status url:(NSString *) urlString picture:(NSString *) pic lat:(double ) lat log:(double) log;
+- (NSDictionary *) setAuth;
 
 @end
 
@@ -95,7 +98,7 @@ NSString * error = @"error_code";
 		[mbody release];
 		return result;	
 	}else{
-		ServerSideException * exception = [ServerSideException exceptionWithName:@"Server side exception" reason:@"Server side exception when update status." userInfo:nil];
+		ServerSideException * exception = [[[ServerSideException alloc] init] autorelease];
 		ServerSideError * errorMsg = [JsonStatusParser parsetoServerSideError:resultString];
 		[exception setError:errorMsg];
 		[errorMsg release];
@@ -124,7 +127,7 @@ NSString * error = @"error_code";
 		[resultString release];
 		return result;	
 	}else{
-		ServerSideException * exception = [ServerSideException exceptionWithName:@"Server side exception" reason:@"Server side exception when update status." userInfo:nil];
+		ServerSideException * exception = [[[ServerSideException alloc] init] autorelease];
 		ServerSideError * errorMsg = [JsonStatusParser parsetoServerSideError:resultString];
 		[exception setError:errorMsg];
 		[errorMsg release];
@@ -165,8 +168,8 @@ NSString * error = @"error_code";
 	NSMutableString * urlString = [[NSMutableString alloc] init];
 	[urlString appendString:baseUrl];
 	[urlString appendFormat:@"statuses/friends_timeline.json?source=%@",_consumerKey];
-	NSDictionary * paraDic = [NSDictionary dictionaryWithObjectsAndKeys:sinceId,@"since_id",maxid,@"max_id",maxCount,@"count",
-							  currentPage,@"page",nil];
+	NSDictionary * paraDic = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithLongLong:sinceId],@"since_id",[NSNumber numberWithInt:maxid],@"max_id",[NSNumber numberWithInt:maxCount],@"count",
+							  [NSNumber numberWithInt:currentPage],@"page",nil];
 	NSString * paraString = [self generateParameterString:paraDic];
 	[urlString appendFormat:@"%@",paraString];
 	[paraString release];
@@ -184,8 +187,8 @@ sinceId:(weiboId) sinceId maxId:(weiboId) maxid count:(int) maxCount page:(int) 
 	[urlString appendString:baseUrl];
 	// uid will lost at here temporarily
 	[urlString appendFormat:@"statuses/user_timeline.json?source=%@",_consumerKey];
-	NSDictionary * paraDic = [NSDictionary dictionaryWithObjectsAndKeys:userId,@"user_id",sinceId,@"since_id",maxid,@"max_id",maxCount,@"count",
-							  currentPage,@"page",nil];
+	NSDictionary * paraDic = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithLongLong:uid],@"user_id",[NSNumber numberWithLongLong:sinceId],@"since_id",[NSNumber numberWithLongLong:maxid],@"max_id",[NSNumber numberWithInt:maxCount],@"count",
+							  [NSNumber numberWithInt:currentPage],@"page",nil];
 	NSString * paraString = [self generateParameterString:paraDic];
 	[urlString appendFormat:paraString];
 	[paraString release];
@@ -201,8 +204,10 @@ sinceId:(weiboId) sinceId maxId:(weiboId) maxid count:(int) maxCount page:(int) 
 	NSMutableString * urlString = [[NSMutableString alloc] init];
 	[urlString appendString:baseUrl];
 	[urlString appendFormat:@"statuses/mentions.json?source=%@",_consumerKey];
-	NSDictionary * paraDic = [NSDictionary dictionaryWithObjectsAndKeys:sinceId,@"since_id",maxid,@"max_id",maxCount,@"count",
-							  currentPage,@"page",nil];
+	NSDictionary * paraDic = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithLongLong:sinceId],
+							  @"since_id",[NSNumber numberWithLongLong:maxid],@"max_id",
+							  [NSNumber numberWithInt:maxCount],@"count",
+							  [NSNumber numberWithInt:currentPage],@"page",nil];
 	NSString * paraString = [self generateParameterString:paraDic];
 	[urlString appendFormat:@"%@",paraString];
 	[paraString release];
@@ -218,8 +223,9 @@ sinceId:(weiboId) sinceId maxId:(weiboId) maxid count:(int) maxCount page:(int) 
 	NSMutableString * urlString = [[NSMutableString alloc] init];
 	[urlString appendString:baseUrl];
 	[urlString appendFormat:@"statuses/comments_timeline.json?source=%@",_consumerKey];
-	NSDictionary * paraDic = [NSDictionary dictionaryWithObjectsAndKeys:sinceId,@"since_id",maxid,@"max_id",maxCount,@"count",
-							  currentPage,@"page",nil];
+	NSDictionary * paraDic = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithLongLong:sinceId],@"since_id",
+							  [NSNumber numberWithLongLong:maxid],@"max_id",[NSNumber numberWithInt:maxCount],@"count",
+							  [NSNumber numberWithInt:currentPage],@"page",nil];
 	NSString * paraString = [self generateParameterString:paraDic];
 	[urlString appendFormat:@"%@",paraString];
 	[paraString release];
@@ -235,8 +241,9 @@ sinceId:(weiboId) sinceId maxId:(weiboId) maxid count:(int) maxCount page:(int) 
 	NSMutableString * urlString = [[NSMutableString alloc] init];
 	[urlString appendString:baseUrl];
 	[urlString appendFormat:@"statuses/comments_by_me.json?source=%@",_consumerKey];
-	NSDictionary * paraDic = [NSDictionary dictionaryWithObjectsAndKeys:sinceId,@"since_id",maxid,@"max_id",maxCount,@"count",
-							  currentPage,@"page",nil];
+	NSDictionary * paraDic = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithLongLong:sinceId],@"since_id",
+							  [NSNumber numberWithLongLong:maxid],@"max_id",[NSNumber numberWithInt:maxCount],@"count",
+							  [NSNumber numberWithInt:currentPage],@"page",nil];
 	NSString * paraString = [self generateParameterString:paraDic];
 	[urlString appendFormat:@"%@",paraString];
 	[paraString release];
@@ -252,8 +259,9 @@ sinceId:(weiboId) sinceId maxId:(weiboId) maxid count:(int) maxCount page:(int) 
 	NSMutableString * urlString = [[NSMutableString alloc] init];
 	[urlString appendString:baseUrl];
 	[urlString appendFormat:@"statuses/comments_timeline.json?source=%@",_consumerKey];
-	NSDictionary * paraDic = [NSDictionary dictionaryWithObjectsAndKeys:sinceId,@"since_id",maxid,@"max_id",maxCount,@"count",
-							  currentPage,@"page",nil];
+	NSDictionary * paraDic = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithLongLong:sinceId],@"since_id",
+							  [NSNumber numberWithLongLong:maxid],@"max_id",[NSNumber numberWithInt:maxCount],@"count",
+							  [NSNumber numberWithInt:currentPage],@"page",nil];
 	NSString * paraString = [self generateParameterString:paraDic];
 	[urlString appendFormat:@"%@",paraString];
 	[paraString release];
@@ -269,8 +277,9 @@ sinceId:(weiboId) sinceId maxId:(weiboId) maxid count:(int) maxCount page:(int) 
 	NSMutableString * urlString = [[NSMutableString alloc] init];
 	[urlString appendString:baseUrl];
 	[urlString appendFormat:@"statuses/comments.json?source=%@",_consumerKey];
-	NSDictionary * paraDic = [NSDictionary dictionaryWithObjectsAndKeys:statusId,@"id",maxCount,@"count",
-							  currentPage,@"page",nil];
+	NSDictionary * paraDic = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithLongLong:statusId],@"id",
+							  [NSNumber numberWithInt:maxCount],@"count",
+							  [NSNumber numberWithInt:currentPage],@"page",nil];
 	NSString * paraString = [self generateParameterString:paraDic];
 	[urlString appendFormat:@"%@",paraString];
 	[paraString release];
@@ -283,7 +292,7 @@ sinceId:(weiboId) sinceId maxId:(weiboId) maxid count:(int) maxCount page:(int) 
 }
 
 - (Comment *)comment:(weiboId) statusId commentString:(NSString *) commentString{
-	if(statusId == nil||commentString==nil){
+	if(statusId == NULL||commentString==nil){
 		InvalidParameterException * exception = [InvalidParameterException 
 												 exceptionWithName:@"Invalid Parameter Exception" reason:@"Status should not be nil. " userInfo:nil];
 		@throw exception;
@@ -292,7 +301,8 @@ sinceId:(weiboId) sinceId maxId:(weiboId) maxid count:(int) maxCount page:(int) 
 	[urlString appendString:baseUrl];
 	[urlString appendFormat:@"statuses/comment.json?source=%@",_consumerKey];
 	//todo add new check
-	NSDictionary * mbody = [NSDictionary dictionaryWithObjectsAndKeys:statusId,@"id",commentString,@"comment",nil];
+	NSDictionary * mbody = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithLongLong:statusId],@"id",
+							commentString,@"comment",nil];
 	NSString * resultString = [self retrieveData:urlString callMethod:POST body:mbody];
 	Comment * result = [JsonStatusParser parseToComment:resultString];
 	[urlString release];
@@ -319,8 +329,9 @@ sinceId:(weiboId) sinceId maxId:(weiboId) maxid count:(int) maxCount page:(int) 
 	NSMutableString * urlString = [[NSMutableString alloc] init];
 	[urlString appendString:baseUrl];
 	[urlString appendFormat:@"direct_messages.json?source=%@",_consumerKey];
-	NSDictionary * paraDic = [NSDictionary dictionaryWithObjectsAndKeys:sinceId,@"since_id",maxid,@"max_id",maxCount,@"count",
-							  currentPage,@"page",nil];
+	NSDictionary * paraDic = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithLongLong:sinceId],@"since_id",
+							  [NSNumber numberWithLongLong:maxid],@"max_id",[NSNumber numberWithInt:maxCount],@"count",
+							  [NSNumber numberWithInt:maxCount],@"page",nil];
 	NSString * paraString = [self generateParameterString:paraDic];
 	[urlString appendFormat:@"%@",paraString];
 	[paraString release];
@@ -336,8 +347,9 @@ sinceId:(weiboId) sinceId maxId:(weiboId) maxid count:(int) maxCount page:(int) 
 	NSMutableString * urlString = [[NSMutableString alloc] init];
 	[urlString appendString:baseUrl];
 	[urlString appendFormat:@"direct_messages/sent.json?source=%@",_consumerKey];
-	NSDictionary * paraDic = [NSDictionary dictionaryWithObjectsAndKeys:sinceId,@"since_id",maxid,@"max_id",maxCount,@"count",
-							  currentPage,@"page",nil];
+	NSDictionary * paraDic = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithLongLong:sinceId],@"since_id",
+							  [NSNumber numberWithLongLong:maxid],@"max_id",[NSNumber numberWithInt:maxCount],@"count",
+							  [NSNumber numberWithInt:currentPage],@"page",nil];
 	NSString * paraString = [self generateParameterString:paraDic];
 	[urlString appendFormat:@"%@",paraString];
 	[paraString release];
@@ -467,6 +479,19 @@ sinceId:(weiboId) sinceId maxId:(weiboId) maxid count:(int) maxCount page:(int) 
 		[bodyDic setObject:value forKey:key];
 	}
 }
+
++ (NSString *)version{
+} 
+- (NSString *)clientName{
+} 
+- (NSString *)clientVersion{}
+- (NSString *)clientURL{}
+- (NSString *)clientSourceToken{}
+- (void)setClientName:(NSString *)name version:(NSString *)version URL:(NSString *)url token:(NSString *)token{}
+- (NSString *)APIDomain{}
+- (void)setAPIDomain:(NSString *)domain{}
+- (BOOL)usesSecureConnection{}
+- (NSString *)getImageAtURL:(NSString *)urlString{}
 
 -(HttpMethod *) getMethod:(NSString *) urlString{
 	HttpMethod * method = [[HttpMethod alloc] init];
