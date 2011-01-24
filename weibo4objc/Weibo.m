@@ -33,7 +33,8 @@
 @synthesize _accessToken;
 
 @synthesize _username;
-@synthesize _password;	
+@synthesize _password;
+@synthesize useOauth;
 
 
 NSString * baseUrl = @"http://api.t.sina.com.cn/";
@@ -42,7 +43,8 @@ NSString * error = @"error_code";
 -(id) init{
 	self = [super init];
 	if(self != nil){
-	client = [[HttpClient alloc] init];
+		client = [[HttpClient alloc] init];
+		useOauth = TRUE;
 	}
 	return self;
 }
