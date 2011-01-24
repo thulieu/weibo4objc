@@ -15,6 +15,7 @@
 	NSString *secret;
 	NSString *session;
 	NSNumber *duration;
+	NSString * method;
 	NSMutableDictionary *attributes;
 	NSDate *created;
 	BOOL renewable;
@@ -24,6 +25,7 @@
 @property(retain, readwrite) NSString *secret;
 @property(retain, readwrite) NSString *session;
 @property(retain, readwrite) NSNumber *duration;
+@property(retain, readwrite) NSString *method;
 @property(retain, readwrite) NSMutableDictionary *attributes;
 @property(readwrite, getter=isForRenewal) BOOL forRenewal;
 
