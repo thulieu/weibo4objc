@@ -21,7 +21,7 @@
 
 @implementation OAuthToken
 
-@synthesize key, secret, session, duration, attributes, forRenewal;
+@synthesize key, secret, session, duration, attributes, forRenewal,method;
 
 #pragma mark init
 
