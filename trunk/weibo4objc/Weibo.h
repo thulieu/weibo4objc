@@ -30,7 +30,7 @@ static const weiboId nilReplyId = 0;
 	// basic auth - deprecated
 	NSString * _username;
 	NSString * _password;	
-		
+	BOOL useOauth;	
 }
 
 @property (readwrite,retain) NSString * _consumerKey;
@@ -40,6 +40,7 @@ static const weiboId nilReplyId = 0;
 // basic auth - deprecated
 @property (readwrite,retain) NSString * _username;
 @property (readwrite,retain) NSString * _password;	
+@property (readwrite,assign) BOOL useOauth;
 
 -(id)init;
 
