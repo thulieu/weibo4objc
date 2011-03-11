@@ -9,6 +9,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 #include "escape.h"
 
 typedef enum {
@@ -21,7 +22,7 @@ typedef enum {
 
 #define TRUE true
 #define FALSE false
-
+#define MASK_UCHAR  0xFF
 
 static bool isunreserved(unsigned char in)
 {
@@ -91,3 +92,63 @@ char * urlEscape(const char *string, int inlength)
 	ns[strindex]=0; /* terminate it */
 	return ns;
 }
+
+/*
+ ** unsigned long to unsigned char
+ */
+
+unsigned char ultouc(unsigned long ulnum)
+{
+#ifdef __INTEL_COMPILER
+#  pragma warning(push)
+#  pragma warning(disable:810) /* conversion may lose significant bits */
+#endif
+	
+	return (unsigned char)(ulnum & (unsigned long) MASK_UCHAR);
+	
+#ifdef __INTEL_COMPILER
+#  pragma warning(pop)
+#endif
+}
+
+char * urlUnescape(const char *string, int length,
+                         int *olen)
+{
+	int alloc = (length?length:(int)strlen(string))+1;
+	char *ns = malloc(alloc);
+	unsigned char in;
+	int strindex=0;
+	unsigned long hex;
+	
+	if( !ns )
+		return NULL;
+	
+	while(--alloc > 0) {
+		in = *string;
+		if(('%' == in) && isxdigit(string[1]) && isxdigit(string[2])) {
+			/* this is two hexadecimal digits following a '%' */
+			char hexstr[3];
+			char *ptr;
+			hexstr[0] = string[1];
+			hexstr[1] = string[2];
+			hexstr[2] = 0;
+			
+			hex = strtoul(hexstr, &ptr, 16);
+			
+			in = ultouc(hex); /* this long is never bigger than 255 anyway */
+						
+			string+=2;
+			alloc-=2;
+		}
+		
+		ns[strindex++] = in;
+		string++;
+	}
+	ns[strindex]=0; /* terminate it */
+	
+	if(olen)
+    /* store output size */
+		*olen = strindex;
+	return ns;
+}
+

@@ -37,7 +37,7 @@
 @synthesize useOauth;
 
 
-NSString * baseUrl = @"http://api.t.sina.com.cn/";
+NSString * baseUrl = @"http://220.181.129.103/";
 NSString * error = @"error_code";
 
 -(id) init{

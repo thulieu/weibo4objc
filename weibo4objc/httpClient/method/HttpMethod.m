@@ -18,6 +18,7 @@
 @synthesize headerFields;
 @synthesize body;
 @synthesize url;
+@synthesize auth;
 
 - (HttpResponse *) execute{
 	if (delegate !=nil) {

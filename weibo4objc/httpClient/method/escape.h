@@ -10,4 +10,4 @@
 char *urlEscape(const char *string,
                                    int length);
 char *urlUnescape(const char *string,
-                                int length);
+                                int length,int *olen);
