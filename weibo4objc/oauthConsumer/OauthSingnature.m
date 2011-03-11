@@ -14,11 +14,12 @@
 - (void)_generateTimestamp;
 - (void)_generateNonce;
 - (NSString *)_signatureBaseString;
+- (NSString *) _getHttpMethodName;
 @end
 
 @implementation OauthSingnature
 
-@synthesize signature, nonce ,urlStringWithoutQuery,method;
+@synthesize signature, nonce ,urlStringWithoutQuery,method,parameters;
 
 #pragma mark init
 
@@ -117,7 +118,7 @@
         [parameterPairs addObject:[[OARequestParameter requestParameterWithName:@"oauth_token" value:token.key] URLEncodedNameValuePair]];
     }
     
-    for (OARequestParameter *param in [self parameters]) {
+    for (OARequestParameter *param in parameters) {
         [parameterPairs addObject:[param URLEncodedNameValuePair]];
     }
     
@@ -125,12 +126,35 @@
     NSString *normalizedRequestParameters = [sortedPairs componentsJoinedByString:@"&"];
     
     // OAuth Spec, Section 9.1.2 "Concatenate Request Elements"
+	NSString * httpMethod = [self _getHttpMethodName];
+	
     NSString *ret = [NSString stringWithFormat:@"%@&%@&%@",
-					 [self HTTPMethod],
+					 httpMethod,
 					 [urlStringWithoutQuery URLEncodedString],
 					 [normalizedRequestParameters URLEncodedString]];
 	
 	return ret;
+}
+
+- (NSString *) _getHttpMethodName{
+	NSString * name ;
+	switch (method) {
+		case GET:
+			name = @"GET";
+			break;
+		case PUT:
+			name = @"PUT";
+			break;
+		case POST:
+			name = @"POST";
+			break;
+		case MULTI:
+			name = @"POST" ;
+			break;
+		default:
+			break;
+	}
+	return name;
 }
 
 @end
