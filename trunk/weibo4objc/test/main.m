@@ -13,13 +13,17 @@ int main(int argc, char *argv[]) {
  	NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
 	Weibo * weibo = [[Weibo alloc]init];
 	[weibo autorelease];
-	[weibo set_username:@"loopb@sina.cn"];
+	//[weibo set_username:@"loopb@sina.cn"];
+	[weibo set_username:@"14233221"];
 	[weibo set_password:@"123456"];
 	[weibo set_consumerKey:@"1852823608"];
 	@try{
 		//Status * statusme = [weibo statusUpdate:@"aaa1" inReplyToStatusId:1000 latitude:nilLatitude longitude:nilLongitude];
-		Status * statusme = [weibo statusUpload:@"111" pic:@"file:///Users/fanngyuan/Downloads/IMG_0750.jpg" latitude:nilLatitude longitude:nilLongitude];
-		NSLog([statusme description]);	
+		//Status * statusme = [weibo statusUpdate:@"111" pic:@"file:///Users/fanngyuan/Downloads/IMG_0750.jpg" latitude:nilLatitude longitude:nilLongitude];
+		Status * statusme = [weibo statusUpdate:@"122ca" inReplyToStatusId:nilReplyId latitude:nilLatitude longitude:nilLongitude];
+		Comment * comment = [weibo comment:[statusme aid] commentString:@"aaa"];
+		//NSLog([statusme description]);	
+		NSLog([comment description]);
 	}
 	@catch (id ex) {
 		printf("aaa");

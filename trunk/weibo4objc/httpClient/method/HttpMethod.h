@@ -10,6 +10,7 @@
 #import "HttpResponse.h"
 #import "HttpMethodDelegate.h"
 #import "PartBase.h"
+#import "Constants.h"
 
 typedef enum methodEnum {
     GET = 1,
@@ -24,6 +25,7 @@ typedef enum methodEnum {
 	NSMutableDictionary * headerFields;
 	NSMutableDictionary * body;
 	NSURL * url;
+	Auth auth;
 }
 
 -(id) init;
@@ -33,6 +35,7 @@ typedef enum methodEnum {
 @property (readwrite,retain) NSMutableDictionary * headerFields;
 @property (readwrite,retain) NSMutableDictionary * body;
 @property (readwrite,retain) NSURL * url;
+@property (readwrite,assign) Auth auth;
 
 -(HttpResponse *) execute;
 -(void) addPart:(PartBase *) part;

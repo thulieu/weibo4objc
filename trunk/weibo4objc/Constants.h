@@ -16,4 +16,10 @@
 #define withNewStatus = 1;
 #define withoutNewStatus = 0;
 
+typedef enum Auth {
+    BASIC = 1,
+    OAUTH = 2,
+	XAUTH = 3
+} Auth;
+
 const static NSStringEncoding encoding = NSUTF8StringEncoding;
