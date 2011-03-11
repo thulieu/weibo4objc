@@ -21,6 +21,7 @@
     id<OASignatureProviding> signatureProvider;
     NSString *nonce;
     NSString *timestamp;
+	NSMutableDictionary *parameters;
 	NSMutableDictionary *extraOAuthParameters;
 	NSString *urlStringWithoutQuery;
 	methodEnum method;
@@ -29,6 +30,7 @@
 @property(readonly) NSString *nonce;
 @property(retain) NSString * urlStringWithoutQuery;
 @property(assign) methodEnum method;
+@property(retain) NSMutableDictionary * parameters;
 
 - (NSString *)getSingnatureString;
 - (void)setOAuthParameterName:(NSString*)parameterName withValue:(NSString*)parameterValue;
