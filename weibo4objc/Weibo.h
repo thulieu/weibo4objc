@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "OAuthToken.h"
+#import "OAToken.h"
 #import "Constants.h"
 #import "HttpClient.h"
 #import "Status.h"
@@ -25,22 +25,22 @@ static const weiboId nilReplyId = 0;
 	
 	NSString * _consumerKey;
 	NSString * _consumerSecret;
-	OAuthToken * _accessToken;
+	OAToken * _accessToken;
 	
 	// basic auth - deprecated
 	NSString * _username;
 	NSString * _password;	
-	BOOL useOauth;	
+	Auth authType;	
 }
 
 @property (readwrite,retain) NSString * _consumerKey;
 @property (readwrite,retain) NSString * _consumerSecret;
-@property (readwrite,retain) OAuthToken * _accessToken;
+@property (readwrite,retain) OAToken * _accessToken;
 
 // basic auth - deprecated
 @property (readwrite,retain) NSString * _username;
 @property (readwrite,retain) NSString * _password;	
-@property (readwrite,assign) BOOL useOauth;
+@property (readwrite,assign) Auth authType;
 
 -(id)init;
 

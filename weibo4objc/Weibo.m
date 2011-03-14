@@ -34,7 +34,7 @@
 
 @synthesize _username;
 @synthesize _password;
-@synthesize useOauth;
+@synthesize authType;
 
 
 NSString * baseUrl = @"http://220.181.129.103/";
@@ -44,7 +44,7 @@ NSString * error = @"error_code";
 	self = [super init];
 	if(self != nil){
 		client = [[HttpClient alloc] init];
-		useOauth = TRUE;
+		authType = OAUTH;
 	}
 	return self;
 }
