@@ -21,16 +21,32 @@
     id<OASignatureProviding> signatureProvider;
     NSString *nonce;
     NSString *timestamp;
-	NSMutableDictionary *parameters;
+	NSArray *parameters;
 	NSMutableDictionary *extraOAuthParameters;
 	NSString *urlStringWithoutQuery;
 	methodEnum method;
+	Auth auth;
 }
 @property(readonly) NSString *signature;
 @property(readonly) NSString *nonce;
 @property(retain) NSString * urlStringWithoutQuery;
 @property(assign) methodEnum method;
-@property(retain) NSMutableDictionary * parameters;
+@property(assign) Auth auth;
+@property(retain) NSArray * parameters;
+
+- (id)initWithURL:(NSString *)urlString
+		 consumer:(OAConsumer *)aConsumer
+			token:(OAToken *)aToken
+            realm:(NSString *)aRealm
+signatureProvider:(id<OASignatureProviding, NSObject>)aProvider;
+
+- (id)initWithURL:(NSString *)urlString
+		 consumer:(OAConsumer *)aConsumer
+			token:(OAToken *)aToken
+            realm:(NSString *)aRealm
+signatureProvider:(id<OASignatureProviding, NSObject>)aProvider
+            nonce:(NSString *)aNonce
+        timestamp:(NSString *)aTimestamp;
 
 - (NSString *)getSingnatureString;
 - (void)setOAuthParameterName:(NSString*)parameterName withValue:(NSString*)parameterValue;

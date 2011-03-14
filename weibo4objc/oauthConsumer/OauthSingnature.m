@@ -9,6 +9,7 @@
 #import "OauthSingnature.h"
 #import "OARequestParameter.h"
 #import "NSString+URLEncoding.h"
+#import "OAHMAC_SHA1SignatureProvider.h"
 
 @interface OauthSingnature (Private)
 - (void)_generateTimestamp;
@@ -19,9 +20,97 @@
 
 @implementation OauthSingnature
 
-@synthesize signature, nonce ,urlStringWithoutQuery,method,parameters;
+@synthesize signature, nonce ,urlStringWithoutQuery,method,parameters,auth;
 
-#pragma mark init
+#pragma mark Public
+
+- (id)initWithURL:(NSString *)urlString
+		 consumer:(OAConsumer *)aConsumer
+			token:(OAToken *)aToken
+            realm:(NSString *)aRealm
+signatureProvider:(id<OASignatureProviding, NSObject>)aProvider 
+{
+	self = [super init];
+	if(self != nil){ 
+		urlStringWithoutQuery = [urlString retain];
+		consumer = [aConsumer retain];
+		
+		// empty token for Unauthorized Request Token transaction
+		if (aToken == nil)
+			token = [[OAToken alloc] init];
+		else
+			token = [aToken retain];
+		
+		if (aRealm == nil)
+			realm = [[NSString alloc] initWithString:@""];
+		else 
+			realm = [aRealm retain];
+		
+		// default to HMAC-SHA1
+		if (aProvider == nil)
+			signatureProvider = [[OAHMAC_SHA1SignatureProvider alloc] init];
+		else 
+			signatureProvider = [aProvider retain];
+		
+		[self _generateTimestamp];
+		[self _generateNonce];
+	}
+    return self;
+}
+
+// Setting a timestamp and nonce to known
+// values can be helpful for testing
+- (id)initWithURL:(NSString *)urlString
+		 consumer:(OAConsumer *)aConsumer
+			token:(OAToken *)aToken
+            realm:(NSString *)aRealm
+signatureProvider:(id<OASignatureProviding, NSObject>)aProvider
+            nonce:(NSString *)aNonce
+        timestamp:(NSString *)aTimestamp 
+{
+	self = [super init];
+	if(self != nil){ 
+		urlStringWithoutQuery = [urlString retain];
+		consumer = [aConsumer retain];
+		
+		// empty token for Unauthorized Request Token transaction
+		if (aToken == nil)
+			token = [[OAToken alloc] init];
+		else
+			token = [aToken retain];
+		
+		if (aRealm == nil)
+			realm = [[NSString alloc] initWithString:@""];
+		else 
+			realm = [aRealm retain];
+		
+		// default to HMAC-SHA1
+		if (aProvider == nil)
+			signatureProvider = [[OAHMAC_SHA1SignatureProvider alloc] init];
+		else 
+			signatureProvider = [aProvider retain];
+		
+		timestamp = [aTimestamp retain];
+		nonce = [aNonce retain];
+	}
+    return self;
+}
+
+- (void)dealloc
+{
+	[consumer release];
+	[token release];
+	[realm release];
+	[signatureProvider release];
+	[timestamp release];
+	[nonce release];
+	[extraOAuthParameters release];
+	[urlStringWithoutQuery release];
+	[super dealloc];
+}
+
+#pragma mark -
+#pragma mark Public
 
 - (NSString *)getSingnatureString 
 {
@@ -32,8 +121,7 @@
                                       withSecret:[NSString stringWithFormat:@"%@&%@",
 												  [consumer.secret URLEncodedString],
                                                   [token.secret URLEncodedString]]];
-    
-    // set OAuth headers
+	// set OAuth headers
     NSString *oauthToken;
     if ([token.key isEqualToString:@""])
         oauthToken = @""; // not used on Request Token transactions
@@ -49,7 +137,7 @@
 		 [parameterName URLEncodedString],
 		 [[extraOAuthParameters objectForKey:parameterName] URLEncodedString]];
 	}	
-    
+
     NSString *oauthHeader = [NSString stringWithFormat:@"OAuth realm=\"%@\", oauth_consumer_key=\"%@\", %@oauth_signature_method=\"%@\", oauth_signature=\"%@\", oauth_timestamp=\"%@\", oauth_nonce=\"%@\", oauth_version=\"1.0\"%@",
                              [realm URLEncodedString],
                              [consumer.key URLEncodedString],
@@ -60,19 +148,6 @@
                              nonce,
 							 extraParameters];
 	return oauthHeader;
-}
-
-- (void)dealloc
-{
-	[consumer release];
-	[token release];
-	[realm release];
-	[signatureProvider release];
-	[timestamp release];
-	[nonce release];
-	[extraOAuthParameters release];
-	[urlStringWithoutQuery release];
-	[super dealloc];
 }
 
 - (void)setOAuthParameterName:(NSString*)parameterName withValue:(NSString*)parameterValue
@@ -117,7 +192,7 @@
     if (![token.key isEqualToString:@""]) {
         [parameterPairs addObject:[[OARequestParameter requestParameterWithName:@"oauth_token" value:token.key] URLEncodedNameValuePair]];
     }
-    
+
     for (OARequestParameter *param in parameters) {
         [parameterPairs addObject:[param URLEncodedNameValuePair]];
     }
@@ -152,6 +227,7 @@
 			name = @"POST" ;
 			break;
 		default:
+			name = @"GET";
 			break;
 	}
 	return name;

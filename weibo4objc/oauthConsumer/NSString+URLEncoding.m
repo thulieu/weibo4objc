@@ -11,7 +11,7 @@
 
 @implementation NSString (OAURLEncodingAdditions)
 
-- (NSString *)URLEncodedString 
+/*- (NSString *)URLEncodedString 
 {
 	char * selfBeforeEscape = [self UTF8String];	
 	char * selfAfterEscape = urlEscape(selfBeforeEscape, strlen(selfBeforeEscape));
@@ -27,6 +27,28 @@
 	char * selfAfterUnescape = urlUnescape(selfBeforUnescape, strlen(selfBeforUnescape), outputSize);
 	NSString * result = [NSString stringWithUTF8String:selfAfterUnescape];
 	free(selfAfterUnescape);	
+	return result;	
+}
+*/
+
+- (NSString *)URLEncodedString 
+{
+    NSString *result = (NSString *)CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,
+                                                                           (CFStringRef)self,
+                                                                           NULL,
+																		   CFSTR("!*'();:@&=+$,/?%#[]"),
+                                                                           kCFStringEncodingUTF8);
+    [result autorelease];
+	return result;
+}
+
+- (NSString*)URLDecodedString
+{
+	NSString *result = (NSString *)CFURLCreateStringByReplacingPercentEscapesUsingEncoding(kCFAllocatorDefault,
+																						   (CFStringRef)self,
+																						   CFSTR(""),
+																						   kCFStringEncodingUTF8);
+    [result autorelease];
 	return result;	
 }
 
